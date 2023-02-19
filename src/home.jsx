@@ -1,7 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react'
 import './home.css'
-// import * as dotenv from 'dotenv'
-// import express from 'express'
+import { NavLink } from "react-router-dom";
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
 import WorkHistoryTwoToneIcon from '@mui/icons-material/WorkHistoryTwoTone';
 import LightbulbTwoToneIcon from '@mui/icons-material/LightbulbTwoTone';
@@ -42,8 +41,12 @@ export default function home() {
  
   const appearOptions = {
     threshold: 0.65,
-    rootMargin: "0px 0px -300px 0px",
+    rootMargin: "0px 0px -100px 0px",
   };
+  // const appearOptions = {
+  //   threshold: 0.65,
+  //   rootMargin: "0px 0px -300px 0px",
+  // };
 
 
   const navFunction = new IntersectionObserver(function (
@@ -146,15 +149,15 @@ export default function home() {
         
         <p>I have created many apps with different functionalities and designs. Static to dynamic all in a year.</p>
 
-        <h4><a href="https://bookshelf-frontend.onrender.com/"><LaunchIcon style={{fontSize:"10px"}}/> bookshelf</a></h4>  
+        <h4><a className='links' href="https://bookshelf-frontend.onrender.com/"><LaunchIcon style={{fontSize:"10px"}}/> bookshelf</a></h4>  
         <p>Its a full-stack ecommerce app where anyone can sell spare books and buy books. Technologies I've used are react, express, mongodb, node basically a mern app.</p>
-        <h4><a href="https://alarm-clock.eggrat1.repl.co/"><LaunchIcon style={{fontSize:"10px"}}/> timer</a></h4>  
+        <h4><a className='links' href="https://alarm-clock.eggrat1.repl.co/"><LaunchIcon style={{fontSize:"10px"}}/> timer</a></h4>  
          <p>Its a regular timer but with good looks</p>
-         <h4><a href="https://constest-api.eggrat1.repl.co/"><LaunchIcon style={{fontSize:"10px"}}/> contests</a></h4>  
+         <h4><a className='links' href="https://constest-api.eggrat1.repl.co/"><LaunchIcon style={{fontSize:"10px"}}/> contests</a></h4>  
          <p>Its an app which shows all the programming contests in all the programming languages.</p>
-         <h4><a href=""><LaunchIcon style={{fontSize:"10px"}}/> todo list</a></h4>
+         <h4><a className='links' href=""><LaunchIcon style={{fontSize:"10px"}}/> todo list</a></h4>
          <p>a todo list with three different pages.</p>
-         <h4><a href="https://clone-4884f.web.app/"><LaunchIcon style={{fontSize:"10px"}}/> clone</a></h4>
+         <h4><a className='links' href="https://clone-4884f.web.app/"><LaunchIcon style={{fontSize:"10px"}}/> clone</a></h4>
          <p>an amazon clone.</p>
       </div>
       <div  className='blur2 fadeIn'>
@@ -169,12 +172,12 @@ export default function home() {
       <div className='page4 page'>
 
         <div className='iconsDiv'>
-          <a href="" style={{marginBottom:"3px"}}><h2>CV</h2></a>
-          <a href="https://github.com/eggratanurag"><GitHubIcon  /></a>
-          <a href="https://www.linkedin.com/in/eggrat/"><LinkedInIcon /></a>
-          <a href="https://twitter.com/eggrat__"><TwitterIcon /></a>
-          <a href="https://www.behance.net/anuragojha"><FontAwesomeIcon icon={faBehance} style={{fontSize:"25px"}}/></a>
-        
+          <a href="" style={{marginBottom:"3px"}}><h2 className='prolinks'>CV</h2></a>
+          <a className='prolinks' href="https://github.com/eggratanurag"><GitHubIcon  /></a>
+          <a className='prolinks'  href="https://www.linkedin.com/in/eggrat/"><LinkedInIcon /></a>
+          <a className='prolinks' href="https://twitter.com/eggrat__"><TwitterIcon /></a>
+          <a className='prolinks' href="https://www.behance.net/anuragojha"><FontAwesomeIcon icon={faBehance} style={{fontSize:"25px"}}/></a>
+         
         </div>
          <form ref={form} onSubmit={sendEmail}>
           <h1 style={{marginBottom:"0"}}>Contact me.</h1>
@@ -216,6 +219,7 @@ export default function home() {
       <a href='#section3' ref={liRef3} className="li3 li"><WorkHistoryTwoToneIcon /></a>
       <a href='#section4' ref={liRef4} className="li4 li"><EmailTwoToneIcon /></a>
       <a href='#section5' ref={liRef5} className="li5 li"><BookTwoToneIcon /></a>
+      
     </ul>
    </div>
 
