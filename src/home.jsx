@@ -107,9 +107,9 @@ export default function home() {
     <section className='section1 slideIn' id='section1'>
   <p className='curls'>about</p>
 
-      {/* <div  className='blur fadeIn'>
+      <div  className='blur fadeIn'>
         <h1>h</h1>
-      </div> */}
+      </div>
       <div className='flex'>
       <div className='page page1'>
         <h1>Hi!</h1>
@@ -136,9 +136,9 @@ export default function home() {
         </p>
 
       </div>
-       {/* <div  className='blur2 fadeIn'>
+       <div  className='blur2 fadeIn'>
         <h1>h</h1>
-      </div> */}
+      </div>
       </div>
      </section>
      
@@ -160,9 +160,9 @@ export default function home() {
          <h4><a className='links' href="https://clone-4884f.web.app/"><LaunchIcon style={{fontSize:"10px"}}/> clone</a></h4>
          <p>an amazon clone.</p>
       </div>
-      {/* <div  className='blur2 fadeIn'>
+      <div  className='blur2 fadeIn'>
         <h1>h</h1>
-      </div> */}
+      </div>
       </div>
     </section>
 
@@ -202,9 +202,9 @@ export default function home() {
       <div className='page5 page'>
         <p>the blog app is under development</p>
       </div>
-      {/* <div className='blur2 fadeIn'>
+      <div className='blur2 fadeIn'>
         <h1>h</h1>
-      </div> */}
+      </div>
       </div>
     </section>
    
