@@ -172,12 +172,12 @@ button:hover:enabled {
 .page3 p {
   margin-top: 0;
 }
-a {
+/* a {
   text-decoration: none;
 
-}
+} */
 .links {
-
+ 
   color: #95956E;
 }
 .links:hover {
@@ -197,6 +197,13 @@ a {
   transition: all 0.3s ease 0s;
   color: #D2D86E;
 }
+a, input[type="file"] {
+
+  -webkit-tap-highlight-color: transparent !important;
+  text-decoration: none;
+ 
+  
+  }
 
 .navDiv {
   width: 18rem;
@@ -216,6 +223,7 @@ a {
   
 }
 .li {
+ 
   color: #95956E;
   background-color: #100F0F;
   z-index: 1;
@@ -295,27 +303,18 @@ a {
     font-size: 3rem;
     margin: 0;
   }
-  /* .vl {
-    border: 1px solid #D2D86E;
-    height: 100%;
-    position: absolute;
-  
-  } */
+
   .navDiv {
-    /* background-color: red; */
-    /* position: absolute; */
-     /* top: 5rem; */
-    margin-right: 0;
-  
+    margin-right: 5px;
   
   }
 
 .blur {
   left: 2rem;
+  opacity: 1;
 }
 .blur2 {
-  /* top: 25rem; */
-  right: 10rem;
+  right: 6rem;
 }
   .container section{
     width: 100%;
