@@ -195,7 +195,7 @@ export default function home() {
               <h4>
                 <a
                   className="links"
-                  href="https://bookshelf-frontend.onrender.com/"
+                  href="https://kitabghar.onrender.com/"
                 >
                   <LaunchIcon style={{ fontSize: "10px" }} /> bookshelf
                 </a>
@@ -227,11 +227,11 @@ export default function home() {
                 programming languages.
               </p>
               <h4>
-                <a className="links" href="">
+                <a className="links" href="https://todolist-brre.onrender.com/">
                   <LaunchIcon style={{ fontSize: "10px" }} /> todo list
                 </a>
               </h4>
-              <p>a todo list with three different pages.</p>
+              <p>a todo list with the functionality of creating different lists for different pages.</p>
               <h4>
                 <a className="links" href="https://clone-4884f.web.app/">
                   <LaunchIcon style={{ fontSize: "10px" }} /> clone
@@ -284,20 +284,28 @@ export default function home() {
                   the form.
                 </p>
                 <div className="emailDiv">
+                  <div className="inputStyle">
                   <input
                     type="text"
                     placeholder="name"
                     name="user_name"
                     onChange={(e) => setName(e.target.value)}
                   />
+                  </div>
+                  <div className="inputStyle">
                   <input
                     type="email"
                     placeholder="email"
                     name="user_email"
+                    className="input_email"
                     onChange={(e) => setEmail(e.target.value)}
                   />
+                  </div>
                 </div>
+                <div className="inputStyle">
                 <input type="text" placeholder="subject" name="subject" />
+                </div>
+                <div className="inputStyle">
                 <textarea
                   type="text"
                   rows="4"
@@ -305,6 +313,7 @@ export default function home() {
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
                 />
+                </div>
                 <button
                   type="submit"
                   value="send"

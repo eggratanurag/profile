@@ -71,35 +71,42 @@ form {
  display: flex;
  gap: 5px;
 }
-.emailDiv input {
 
- 
- width: 90%;
-}
-input {
-  border-radius: 2px;
+input, textarea {
+
+ width: calc(100% - 20px);
 padding: 10px;
 font-family: 'Poppins', sans-serif;
  color: #D2D86E;
  height: 2rem;
  outline: none;
  border: none;
- background-color: #100F0F;
- border-bottom: 2px  solid #95956E;
- margin-bottom: -2px;
+ background-color: transparent;
 }
-input:focus, textarea:focus {
-  border-bottom: 2px  solid #D2D86E;
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
 }
-textarea {
- background-color: #100F0F;
-  border-radius: 2px;
-  color: #D2D86E;
-  font-family: 'Poppins', sans-serif;
- padding: 10px;
- outline: none;
- border: none;
- border-bottom: 2px  solid #95956E;
+.inputStyle {
+  
+  width: 100%;
+}
+.inputStyle::after {
+  content: ' ';
+  background: #181616;
+  border-radius: 5px;
+  width: 100%;
+  height: 2px;
+  display: block;
+}
+
+.inputStyle:has(:focus)::after {
+  animation-name: strike;
+  background: #D2D86E;
+  animation-duration: .6s;
+  animation-timing-function: ease;
+  
 }
 
 button:disabled,
@@ -172,10 +179,7 @@ button:hover:enabled {
 .page3 p {
   margin-top: 0;
 }
-/* a {
-  text-decoration: none;
 
-} */
 .links {
  
   color: #95956E;
