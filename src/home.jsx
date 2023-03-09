@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./home.css";
-import { NavLink } from "react-router-dom";
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone";
 import WorkHistoryTwoToneIcon from "@mui/icons-material/WorkHistoryTwoTone";
 import LightbulbTwoToneIcon from "@mui/icons-material/LightbulbTwoTone";
@@ -18,7 +17,6 @@ export default function home() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [disable, setDisable] = useState();
 
   const liRef1 = useRef();
   const liRef2 = useRef();
@@ -52,10 +50,7 @@ export default function home() {
     threshold: 0.65,
     rootMargin: "0px 0px -100px 0px",
   };
-  // const appearOptions = {
-  //   threshold: 0.65,
-  //   rootMargin: "0px 0px -300px 0px",
-  // };
+
 
   const navFunction = new IntersectionObserver(function (
     entries,
