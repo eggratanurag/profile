@@ -189,7 +189,7 @@ button:hover:enabled {
   color: #D2D86E;
 }
 .prolinks {
-
+  margin: 0;
   color: #F1F1F1;
 }
 .prolinks:hover {

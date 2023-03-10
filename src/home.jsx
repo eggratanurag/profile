@@ -124,7 +124,7 @@ export default function home() {
               <h1>Hi!</h1>
               <h2>
                 My name is <span style={{ color: "#697C37" }}>Anurag</span> and
-                I'm a Web Developer
+                I'm a Web Developer.
               </h2>
               <p>
                 I am passionate about Front-End Development. I also like to
@@ -151,25 +151,21 @@ export default function home() {
               <h1>I've</h1>
               <h2>
               
-                been learning full-stack web development for more than year
+                been learning full-stack web development for more than year.
               </h2>
               <p>
                 Ive created apps using
-                <span style={{ color: "#697C37" }}>
-               
-                  vanilla javascript, jquery, express
-                </span>
-                . At this time I'm making projects using React.js As I can
+                <span style={{ color: "#697C37" }}> vanilla javascript, jquery, express</span>
+                . At this time I'm making projects using React.js as I can
                 develop full-stack apps I've also used
-                <span style={{ color: "#697C37" }}>Mongodb, Node.js</span> in
-                projects to create backend. .I also use modern CSS frameworks
+                <span style={{ color: "#697C37" }}> Mongodb, Node.js</span> in
+                projects to create backend. I also use modern CSS frameworks
                 such as
-                <span style={{ color: "#697C37" }}>
-                  tailwind, bootstrap, chakraUI
+                <span style={{ color: "#697C37" }}> tailwind, bootstrap, chakraUI
                 </span>
                 . Previously, I've worked as a graphic designer in a company and
-                also as a freelancer. .I have no experience of working in a
-                company or in a team, I am a fresher but with skills
+                I've also worked as a freelancer. I have no prior experience of working in a
+                company or in a team, I am a fresher but with skills.
               </p>
             </div>
             <div className="blur2 fadeIn">
@@ -198,7 +194,7 @@ export default function home() {
               <p>
                 Its a full-stack ecommerce app where anyone can sell spare books
                 and buy books. Technologies I've used are react, express,
-                mongodb, node basically a mern app.
+                mongodb, node basically a mern app. It's a CRA application with context API
               </p>
               <h4>
                 <a
@@ -218,21 +214,20 @@ export default function home() {
                 </a>
               </h4>
               <p>
-                Its an app which shows all the programming contests in all the
-                programming languages.
+                Its an app which shows all the programming contests going to be held.
               </p>
               <h4>
                 <a className="links" href="https://todolist-brre.onrender.com/">
                   <LaunchIcon style={{ fontSize: "10px" }} /> todo list
                 </a>
               </h4>
-              <p>a todo list with the functionality of creating different lists for different pages.</p>
+              <p>a todo list with the functionality of creating different lists for different works. It uses passport and google strategy to authenticate the user.</p>
               <h4>
                 <a className="links" href="https://clone-4884f.web.app/">
                   <LaunchIcon style={{ fontSize: "10px" }} /> clone
                 </a>
               </h4>
-              <p>an amazon clone.</p>
+              <p>an amazon clone with cart system based on redux.</p>
             </div>
             <div className="blur2 fadeIn">
               <h1>h</h1>
@@ -244,10 +239,11 @@ export default function home() {
           <p className="curls">contact</p>
           <div className="flex">
             <div className="page4 page">
-              <div className="iconsDiv">
-                <a href="" style={{ marginBottom: "3px" }}>
-                  <h2 className="prolinks">CV</h2>
+            <a href="https://drive.google.com/file/d/1v5O5R9x3_Xb_-7qLE6ba-d4SY2oo8ani/view?usp=sharing" style={{ marginBottom: "3px" }}>
+                  <h2 className="prolinks">Resume</h2>
                 </a>
+              <div className="iconsDiv">
+                
                 <a className="prolinks" href="https://github.com/eggratanurag">
                   <GitHubIcon />
                 </a>
