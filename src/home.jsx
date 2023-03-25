@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehance } from "@fortawesome/free-brands-svg-icons";
 import LaunchIcon from "@mui/icons-material/Launch";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
+
 export default function home() {
   const [text, setText] = useState("Send Message");
   const [name, setName] = useState("");
@@ -50,7 +52,6 @@ export default function home() {
     threshold: 0.65,
     rootMargin: "0px 0px -100px 0px",
   };
-
 
   const navFunction = new IntersectionObserver(function (
     entries,
@@ -126,10 +127,12 @@ export default function home() {
                 My name is <span style={{ color: "#697C37" }}>Anurag</span> and
                 I'm a Web Developer.
               </h2>
+              <br />
               <p>
                 I am passionate about Front-End Development. I also like to
                 create Full-Stack Applications.
               </p>
+              <br />
               <p style={{ color: "#95956E" }}>
                 My interest falls more on playing with CSS and bringing out
                 something worthwhile. Most of my time is spent on creating
@@ -153,6 +156,7 @@ export default function home() {
               
                 been learning full-stack web development for more than year.
               </h2>
+              <br />
               <p>
                 Ive created apps using
                 <span style={{ color: "#697C37" }}> vanilla javascript, jquery, express</span>
@@ -182,29 +186,24 @@ export default function home() {
                 I have created many apps with different functionalities and
                 designs. Static to dynamic all in a year.
               </p>
-
+                 <br />
               <h4>
-                <a
-                  className="links"
-                  href="https://kitabghar.onrender.com/"
-                >
-                  <LaunchIcon style={{ fontSize: "10px" }} /> bookshelf
-                </a>
+               <Link    className="links" to="/bookshelf">
+                <LaunchIcon style={{ fontSize: "10px" }} /> Bookshelf</Link>
+               
               </h4>
               <p>
                 Its a full-stack ecommerce app where anyone can sell spare books
                 and buy books. Technologies I've used are react, express,
                 mongodb, node basically a mern app. It's a CRA application with context API
               </p>
+              <br />
               <h4>
-                <a
-                  className="links"
-                  href="https://alarm-clock.eggrat1.repl.co/"
-                >
-                  <LaunchIcon style={{ fontSize: "10px" }} /> timer
-                </a>
+              <Link className="links" to="/todolist">
+                <LaunchIcon style={{ fontSize: "10px" }} /> Todolist</Link>
               </h4>
-              <p>Its a regular timer but with good looks</p>
+              <p>a todo list with the functionality of creating different lists for different works. It uses passport and google strategy to authenticate the user.</p>
+              <br />
               <h4>
                 <a
                   className="links"
@@ -216,12 +215,15 @@ export default function home() {
               <p>
                 Its an app which shows all the programming contests going to be held.
               </p>
+              <br />
               <h4>
-                <a className="links" href="https://todolist-brre.onrender.com/">
-                  <LaunchIcon style={{ fontSize: "10px" }} /> todo list
+                <a className="links" href="https://alarm-clock.eggrat1.repl.co/">
+                  <LaunchIcon style={{ fontSize: "10px" }} /> Timer
                 </a>
               </h4>
-              <p>a todo list with the functionality of creating different lists for different works. It uses passport and google strategy to authenticate the user.</p>
+              <p>Its a regular timer but with good looks</p>
+              
+              <br />
               <h4>
                 <a className="links" href="https://clone-4884f.web.app/">
                   <LaunchIcon style={{ fontSize: "10px" }} /> clone
@@ -266,8 +268,8 @@ export default function home() {
                   />
                 </a>
               </div>
-              <form ref={form} onSubmit={sendEmail}>
-                <h1 style={{ marginBottom: "0" }}>Contact me.</h1>
+              <form ref={form} onSubmit={sendEmail} className="contactForm">
+                <h1 style={{ fontSize: "4rem"}}>Contact me.</h1>
                 <p style={{ marginTop: "0" }}>
                   I’m looking for job and also interested in freelance
                   opportunities especially ambitious or large projects. However,
@@ -309,6 +311,7 @@ export default function home() {
                   type="submit"
                   value="send"
                   disabled={!name || !email || !message}
+                  className="sendButton"
                 >
                   <h3>{text}</h3>
                 </button>
@@ -324,7 +327,7 @@ export default function home() {
               <p>the blog app is under development</p>
             </div>
             <div className="blur2 fadeIn">
-              <h1>h</h1>
+              <h1 className="">h</h1>
             </div>
           </div>
         </section>
