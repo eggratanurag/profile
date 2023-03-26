@@ -1,9 +1,10 @@
-import {React, useEffect} from "react";
+import {React, useEffect, useState} from "react";
 import "./project.css";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-export default function project({
+
+export default function Project({
   name,
   dates,
   about,
@@ -15,6 +16,7 @@ export default function project({
   techIcons
 }) {
 
+  
    const Navigate = useNavigate();
 
    const appearOptions = {
@@ -37,8 +39,8 @@ export default function project({
   },
   appearOptions);
 
-
   useEffect(() => {
+   
     const faders = document.getElementsByClassName("fader");
     const popins = document.getElementsByClassName("popin");
     const slider = document.getElementsByClassName("curveIn")[0];
@@ -49,7 +51,7 @@ export default function project({
     for(var popin of popins) {
       appearOnScroll.observe(popin);
     }
-  });
+  }, []);
 //    
 
   return (
@@ -66,7 +68,9 @@ export default function project({
           {/* <div className="projectName">project name</div> */}
         </div>
         <main className="fader">
-          <img src={ldPageImg} alt='' />
+        
+          
+      <img src={ldPageImg} decoding="async" alt='' />
         </main>
         <div className='qr fader'>
           <div>
