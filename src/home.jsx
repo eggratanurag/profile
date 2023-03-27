@@ -13,6 +13,7 @@ import { faBehance } from "@fortawesome/free-brands-svg-icons";
 import LaunchIcon from "@mui/icons-material/Launch";
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 export default function home() {
   const [text, setText] = useState("Send Message");
@@ -337,29 +338,29 @@ export default function home() {
         <div className="vl"></div>
         <ul>
     
-            <a href="#section1" ref={liRef1} className="li1 li">
+            <HashLink to="/#section1" ref={liRef1} className="li1 li">
               <InfoTwoToneIcon />
-            </a>
+            </HashLink>
      
      
-            <a href="#section2" ref={liRef2} className="li2 li">
+            <HashLink to="/#section2" ref={liRef2} className="li2 li">
               <LightbulbTwoToneIcon />
-            </a>
+            </HashLink>
    
        
-            <a href="#section3" ref={liRef3} className="li3 li">
+            <HashLink to="/#section3" ref={liRef3} className="li3 li">
               <WorkHistoryTwoToneIcon />
-            </a>
+            </HashLink>
      
   
-            <a href="#section4" ref={liRef4} className="li4 li">
+            <HashLink to="/#section4" ref={liRef4} className="li4 li">
               <EmailTwoToneIcon />
-            </a>
+            </HashLink>
      
       
-            <a href="#section5" ref={liRef5} className="li5 li">
+            <HashLink to="#section5" ref={liRef5} className="li5 li">
               <BookTwoToneIcon />
-            </a>
+            </HashLink>
       
         </ul>
       </div>
