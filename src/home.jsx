@@ -126,7 +126,7 @@ export default function home() {
 
 {/* //! ------- section 1 -----------------------------------------------------------------------------------------------------------------------------------------------------        */}
         
-        <section className='section1 slideIn relative flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section1'>
+        <section style={{height: "100dvh"}} className='section1 slideIn relative flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section1'>
           <p className=' m-4 font-Zeyada text-2xl'>about</p>
           <div className='fadeIn absolute bottom-32  w-1/2 h-1/2 bg-[#D2D86E] rounded-full mix-blend-normal filter blur-[12rem]'></div>
 
@@ -173,7 +173,7 @@ export default function home() {
 
 {/* //! ------- section 2   ---------------------------------------------------------------------------------------------------------------------------------- */}
 
-        <section className='section2 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section2'>
+        <section style={{height: "100dvh"}} className='section2 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section2'>
           <p className='m-4 font-Zeyada text-2xl'>skills & experience</p>
 
           <div className='md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full '>
@@ -215,8 +215,8 @@ export default function home() {
                 skills.
               </p>
               <div className='mt-2 sm:mt-8 flex gap-3 sm:gap-8 flex-wrap'>
-                {SkillIcons.map((icon) => (
-                  <div className='tooltip'>
+                {SkillIcons.map((icon, index) => (
+                  <div className='tooltip' key={index}>
                     <img className="w-7 h-7 sm:w-10 sm:h-10 hover:after:content['hello']" src={Object.values(icon)} alt='' />
                     <span className='tooltiptext'>{Object.keys(icon)}</span>
                   </div>
@@ -230,7 +230,7 @@ export default function home() {
 
  {/* //!-------  section 3   ----------------------------------------------------------------------------------------------------------------------- */}
 
-        <section className='section3 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section3'>
+        <section style={{height: "100dvh"}} className='section3 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section3'>
           <p className='m-4 font-Zeyada text-2xl'>work & projects</p>
           <div className='md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full '>
             <div className='z-10 flex flex-col gap-2 sm:gap-5'>
@@ -242,12 +242,15 @@ export default function home() {
                 Click on Links and headout to a dedicated page for the project.
             </p>
                  
-                 {projectsLink.map(item=> (
-                   <CustomLink
+                 {projectsLink.map((item, index)=> (
+                  <React.Fragment key={index}>
+                    
+                   <CustomLink 
                     title={item.title}
                     link={item.link}
                     desc={item.desc}
                     />
+                    </React.Fragment>
                    ))}
 
             </div>
@@ -257,7 +260,7 @@ export default function home() {
 
 {/* //! -------- section 4 ----------------------------------------------------------------------------------------------------------------------------------------- */}
        
-        <section className='section4  slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section4'>
+        <section style={{height: "100dvh"}} className='section4  slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section4'>
           <p className='m-4 font-Zeyada text-2xl'>contact</p>
           <div className='md:p-16 pr-14 sm:pr-0 pb-10  flex justify-center items-end h-full '>
             <div className='z-10 '>
@@ -347,7 +350,7 @@ export default function home() {
 
 {/* //! ----------- section 5 --------------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-        <section className='section5 slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section5'>
+        <section style={{height: "100dvh"}} className='section5 slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section5'>
           <p className='m-4 font-Zeyada text-2xl'>blog</p>
           <div className='md:p-16 pr-12 sm:pr-0 pb-1  flex  justify-center items-end'>
             <div className=''>
