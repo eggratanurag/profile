@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CustomLink = ({link, title, desc}) => {
   return (
-    <>
+    <div>
       <h4 className="font-[501] ">
         <Link
           className='text-offGreen  hover:text-lime transition-all ease-in-out delay-50'
@@ -14,7 +14,7 @@ const CustomLink = ({link, title, desc}) => {
         </Link>
       </h4>
       <p>{desc}</p>
-    </>
+    </div>
   );
 };
 
