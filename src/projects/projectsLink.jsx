@@ -4,7 +4,7 @@ const ProjectsLink =  [
     {
         title: " The Prestige International School",
         link: "/pis",
-        desc: "Its a full-stack school website app in which most of the data is mutable."
+        desc: "Its a full-stack school website app in which most of the data is manipulatable."
     },
     {
         title: " Bookshelf",
@@ -19,7 +19,7 @@ const ProjectsLink =  [
     {
         title: " hackathon Submission",
         link: "/hackathon-submission",
-        desc: " a todo list with the functionality of creating different lists for different works."
+        desc: " a front-end app with basic CRUD operations, sorting and searching"
     },
     {
         title: "Amazon Clone",
