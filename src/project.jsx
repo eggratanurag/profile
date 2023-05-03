@@ -1,16 +1,17 @@
 import {React, useEffect, useState} from "react";
+import Carousel from "./components/carousel";
 import "./project.css";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-
 export default function Project({
   name,
-  dates,
+  started,
+  ended,
   about,
   idea,
   journey,
-  ldPageImg,
+  imageArray,
   qrImg,
   link,
   techIcons
@@ -55,67 +56,72 @@ export default function Project({
 //    
 
   return (
-    <div className='mainDiv'>
-      <div className='bigBloom'>Bloom</div>
+    <div className='flex justify-center items-center text-[#efefef] font-poppins bg-background1 relative'>
+      <div className='absolute w-1/2 h-1/2 opacity-70 bg-lime mix-blend-normal filter blur-[12rem]'>Bloom</div>
       <div className='projectDiv'>
-        <div className='projectName'>
+        <div className='projectName flex gap-3 items-center p-3'>
           <div>
-            <button className='backButton' onClick={() => Navigate('/')}>
+            <button className=' bg-background4 w-12 h-12 rounded-full border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50'
+             onClick={() => Navigate('/')}>
               <ArrowBackIcon />
             </button>
           </div>
-          <h1 className="curveIn">{name}</h1>
-          {/* <div className="projectName">project name</div> */}
-        </div>
-        <main className="fader">
-        
+          <h1 className="curveIn text-4xl  font-bold font-Montserrat">{name}</h1>
           
-      <img src={ldPageImg} decoding="async" alt='' />
+        </div>
+        <main className="fader flex flex-col items-center justify-center relative">
+        
+        <Carousel imageArray={imageArray} />
+          
         </main>
-        <div className='qr fader'>
-          <div>
-          <img src={qrImg} alt='' />
-          <p>Scan QR to view it on phone.</p>
+        <div className='qr fader flex flex-col items-left justify-evenly p-5'>
+          <div >
+          <img src={qrImg} className="w-32 h-32 object-contain rounded-md border border-1 border-background2" alt='qr' />
+          <p >Scan QR to view it on phone.</p>
           </div>
          
-         <div>
+         <div >
           <p>Why scroll through when you can view it LIVE</p>
-          <h4 style={{marginTop: "20px"}}><a href={link} className="live">{name}</a></h4>
+
+          <div className="flex gap-2 pt-5">
+          <h4><a href={link} className="rounded-full p-2 px-5 text-lime bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">View Live</a></h4>
+          <h4><a href={link} className="rounded-full p-2 px-5 text-lime bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">Code</a></h4>
+          </div>
          
          </div>
-        
-       
         </div>
 
-        <div className='dates fader'>
+        <div className='dates fader p-5 flex flex-col justify-evenly'>
+
           <div>
-          <h2>Dates</h2>
-          <p>{dates}</p>
+          <h2 className="text-2xl sm:text-3xl font-bold pb-2  font-Montserrat">Dates</h2>
+          <p><span className="text-lg font-semibold">Started - </span>{started}</p>
+          <p><span className="text-lg font-semibold">ended - </span>{ended}</p>
           </div>
          <div>
           <h2>Technologies</h2>
-          <div className="iconsDiv">
+          <div className=" mt-2 flex gap-2 flex-wrap">
           {techIcons.map(icon=> (
             <div className="tooltip">
-            <img src={Object.values(icon)} alt=""/>
+            <img src={Object.values(icon)} className="w-7 hover:content['hello']" alt=""/>
             <span className="tooltiptext">{Object.keys(icon)}</span>
             </div>
           ))}
           </div>
          </div>
         </div>
-        <div className='info popin'>
-          <h2>What is it about?</h2>
+        <div className='info popin p-5'>
+          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">What is it about?</h2>
           <br />
           <p>{about}</p>
         </div>
-        <div className='idea popin'>
-          <h2>Idea behind it</h2>
+        <div className='idea p-5 popin'>
+          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">Idea behind it</h2>
           <br />
           <p>{idea}</p>
         </div>
-        <div className='journey fader'>
-          <h2>Problems and Tackling</h2>
+        <div className='journey p-5 fader'>
+          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">Problems and Tackling</h2>
           <br />
           {journey}
         </div>

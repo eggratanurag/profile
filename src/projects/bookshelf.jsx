@@ -1,39 +1,37 @@
 import React from "react";
-import Project from "./project";
-import bookshelfLdPage from "./images/bookshelfLdPage.png";
-import bookshelfQr from "./images/bookshelfQr.png";
+import Project from "../project";
+import bookshelf1 from "../images/bookshelf1.jpg";
+import bookshelf2 from "../images/bookshelf2.jpg";
+import bookshelf3 from "../images/bookshelf3.jpg";
+import bookshelf4 from "../images/bookshelf4.jpg";
+import bookshelf5 from "../images/bookshelf5.jpg";
+import bookshelfQr from "../images/bookshelfQr.png";
 
 export default function bookshelf() {
   const techIcons = [
-    { Javascript: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
+    { "Javascript": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
     { "React.js": "https://cdn-icons-png.flaticon.com/512/1126/1126012.png" },
     { "CSS 3": "https://cdn-icons-png.flaticon.com/512/5968/5968242.png" },
+    { "Chakra UI": "https://img.icons8.com/color/48/null/chakra-ui.png"},
     {
-      MongoDB:
+      "MongoDB":
         "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/256/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png",
     },
     { "Express.js": "https://img.icons8.com/ios/256/express-js.png" },
     { "Node.js": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png" },
   ];
 
+const imageArray = [bookshelf1, bookshelf2, bookshelf3, bookshelf4, bookshelf5]
 
-  function dates() {
-    return (
-      <>
-        started - 2/jan/2023.
-        <br />
-        end - 30/jan/2023.
-      </>
-    );
-  }
   return (
     <Project
-      name={"Bookshelf"}
-      dates={dates()}
+      name="Bookshelf"
+      started='2/jan/2023'
+      ended='30/jan/2023'
       about={
         <span>
           Its a full-stack ecommerce app where anyone can sell spare books and
-          buy books. .Anybody can login, create profile and add contact
+          buy books. Anybody can login, create profile and add contact
           information and can upload books to sell. The is fully responsive and
           it works same as on desktop. adding books images makes it more easy to
           find books and also searching makes it more easy. The seller profile
@@ -86,7 +84,7 @@ export default function bookshelf() {
           </ul>
         </span>
       }
-      ldPageImg={bookshelfLdPage}
+      imageArray = {imageArray}
       qrImg={bookshelfQr}
       link='https://kitabghar.onrender.com/'
       techIcons={techIcons}

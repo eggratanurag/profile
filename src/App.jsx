@@ -1,7 +1,9 @@
 import Home from "./home.jsx"
+import Pis from "./projects/pis";
+import Hackathon from "./projects/hackathonSubmission";
+import Bookshelf from "./projects/bookshelf.jsx";
+import Todolist from "./projects/todolist.jsx";
 
-import Bookshelf from "./bookshelf.jsx";
-import Todolist from "./todolist.jsx";
 import { HashRouter, Routes, Route } from "react-router-dom";
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
           <Route path="/todolist" element={<Todolist />} />
+          <Route path="/pis" element={<Pis />} />
+          <Route path="/hackathon-submission" element={<Hackathon />} />
           
       </Routes>
     </HashRouter>

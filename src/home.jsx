@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import CustomLink from "./components/customLink";
+import projectsLink from "./projects/projectsLink";
 import "./home.css";
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone";
 import WorkHistoryTwoToneIcon from "@mui/icons-material/WorkHistoryTwoTone";
@@ -10,13 +12,12 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehance } from "@fortawesome/free-brands-svg-icons";
-import LaunchIcon from "@mui/icons-material/Launch";
 import emailjs from "@emailjs/browser";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import SkillIcons from "./skillIcons.jsx";
-import ProfileImg from "./images/profileImg.jpg"
+import ProfileImg from "./images/profileImg.jpeg"
 import EastIcon from '@mui/icons-material/East';
+
 
 export default function home() {
   const [text, setText] = useState("Send Message");
@@ -120,31 +121,32 @@ export default function home() {
   }, []);
   //
   return (
-    <div className='profile'>
-      <div className='container' id='scrollbar'>
-        <section className='section1 slideIn' id='section1'>
-          <p className='curls'>about</p>
+    <div className='h-screen flex text-sm sm:text-base text-[#efefef] font-poppins bg-background1' >
+      <div className='container bg-background1 overflow-y-scroll snap-y snap-mandatory' id='scrollbar' >
 
-          <div className='blur fadeIn'>
-            <h1>h</h1>
-          </div>
-          <div className='flex'>
-            <div className='page page1'>
+{/* //! ------- section 1 -----------------------------------------------------------------------------------------------------------------------------------------------------        */}
+        
+        <section className='section1 slideIn relative flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section1'>
+          <p className=' m-4 font-Zeyada text-2xl'>about</p>
+          <div className='fadeIn absolute bottom-32  w-1/2 h-1/2 bg-[#D2D86E] rounded-full mix-blend-normal filter blur-[12rem]'></div>
+
+          <div className='pr-14 sm:pr-0 md:p-16 pb-1  flex justify-center items-end  h-full  '>
+            <div className='z-10 '>
              
+             
+              <h1 className="text-4xl sm:text-8xl font-bold font-Montserrat pb-5">Me, Myself & I</h1>
               
-              <h1 className="mainHeading">Me, Myself & I</h1>
-              
-              <h2>
-                am <span style={{ color: "#697C37" }}>Anurag </span> and
+              <h2 className="pb-5">
+                am <span className="text-highlight">Anurag </span> and
                 I'm a Web Developer. I am based in M.P.
               </h2>
-              <br />
-              <p>
+             
+              <p className="pb-5">
                 I am passionate about Front-End Development. I can also 
                 create Full-Stack Applications.
               </p>
-              <br />
-              <p style={{ color: "#95956E" }}>
+            
+              <p className="text-highlight2 pb-5">
                 My interest falls more on playing with CSS and bringing out
                 something worthwhile. Most of my time is spent on creating
                 responsive web apps. I like to use modern front-end libraries to
@@ -154,52 +156,56 @@ export default function home() {
                 positive people.
                 
               </p>
-              <div className="pfpDiv">
-              <img className="pfp" src={ProfileImg} alt="" />
-                   <h3>See Resume and Contacts</h3>
-                   <div>
-                   <HashLink to='/#section4' className="arrow flex">
+              <div className="w-[min(98%,25rem)]  p-2 flex  items-center bg-background3 border border-1 border-background2 rounded-full ">
+              
+            <img className="w-16 h-16 square mr-2  object-cover rounded-full" src={ProfileImg} alt="pfp" />
+                   <p className="ml-auto" >See Resume and Contacts</p>
+                  
+                   <HashLink className='w-14 h-14 ml-1 square flex items-center justify-center rounded-full text-white   hover:bg-background2' to='/#section4'>
                      <EastIcon  />
                    </HashLink>
-                   </div>
+                  
               </div>
             </div>
           </div>
+
         </section>
 
-        <section className='section2 slideIn' id='section2'>
-          <p className='curls'>skills & experience</p>
+{/* //! ------- section 2   ---------------------------------------------------------------------------------------------------------------------------------- */}
 
-          <div className='flex'>
-            <div className='page2 page '>
-              <h1 className="bigHeading">I've</h1>
+        <section className='section2 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section2'>
+          <p className='m-4 font-Zeyada text-2xl'>skills & experience</p>
+
+          <div className='md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full '>
+            <div className='z-10 '>
+              <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">I've</h1>
               <h2>
                 been learning full-stack web development for more than year.
               </h2>
               <br />
               <p>
                 Ive created apps using
-                <span style={{ color: "#697C37" }}>
+                <span className="text-highlight">
                   {" "}
                   vanilla javascript, jquery, express
                 </span>
                 . At this time I'm making projects using React.js, as I can
                 develop full-stack apps I've also used
-                <span style={{ color: "#697C37" }}> Mongodb, Node.js</span> in
+                <span className="text-highlight"> Mongodb, Node.js</span> in
                 projects to create backend. I also use modern CSS frameworks
                 such as
-                <span style={{ color: "#697C37" }}>
+                <span className="text-highlight">
                   {" "}
                   tailwind, bootstrap, chakraUI.{" "}
                 </span>
                 In some of my projects I've used{" "}
-                <span style={{ color: "#697C37" }}>
+                <span className="text-highlight">
                   {" "}
                   GOOGLE Oauth authentication strategy{" "}
                 </span>{" "}
                 to authenticate the user using the{" "}
-                <span style={{ color: "#697C37" }}> Passport.js. </span>I am also
-                familiar with{" "}<span style={{ color: "#697C37" }}> git, mongoose.</span>
+                <span className="text-highlight"> Passport.js. </span>I am also
+                familiar with{" "}<span className="text-highlight"> git, mongoose.</span>
                 
                 <br />
                 <br />
@@ -208,116 +214,74 @@ export default function home() {
                 working in a company or in a team, I am a fresher but with
                 skills.
               </p>
-              <div className='skillIconsDiv'>
+              <div className='mt-2 sm:mt-8 flex gap-3 sm:gap-8 flex-wrap'>
                 {SkillIcons.map((icon) => (
                   <div className='tooltip'>
-                    <img src={Object.values(icon)} alt='' />
+                    <img className="w-7 h-7 sm:w-10 sm:h-10 hover:after:content['hello']" src={Object.values(icon)} alt='' />
                     <span className='tooltiptext'>{Object.keys(icon)}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className='blur2 fadeIn'>
-              <h1>h</h1>
-            </div>
+            <div className='fadeIn absolute -left-40 -bottom-40  w-1/2 h-1/2 bg-[#D2D86E] rounded-full mix-blend-normal filter blur-[12rem]'></div>
+
           </div>
         </section>
 
-        <section className='section3  slideIn ' id='section3'>
-          <p className='curls'>work & projects</p>
-          <div className='flex'>
-            <div className='page3 page'>
-            <h1 className="bigHeading">Projects.</h1>
-              <p>
+ {/* //!-------  section 3   ----------------------------------------------------------------------------------------------------------------------- */}
+
+        <section className='section3 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section3'>
+          <p className='m-4 font-Zeyada text-2xl'>work & projects</p>
+          <div className='md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full '>
+            <div className='z-10 flex flex-col gap-2 sm:gap-5'>
+            <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">Projects.</h1>
+            <p className="faltu">
+                <span className="hidden sm:block">
                 I have created many apps with different functionalities and
-                designs. Static to dynamic all in a year.
-              </p>
-              <br />
-              <h4>
-                <Link className='links' to='/bookshelf'>
-                  <LaunchIcon style={{ fontSize: "10px" }} /> Bookshelf
-                </Link>
-              </h4>
-              <p>
-                Its a full-stack ecommerce app where anyone can sell spare books
-                and buy books. Technologies I've used are react, express,
-                mongodb, node basically a mern app. It's a CRA application with
-                context API
-              </p>
-              <br />
-              <h4>
-                <Link className='links' to='/todolist'>
-                  <LaunchIcon style={{ fontSize: "10px" }} /> Todolist
-                </Link>
-              </h4>
-              <p>
-                a todo list with the functionality of creating different lists
-                for different works. It uses passport and google strategy to
-                authenticate the user.
-              </p>
-              <br />
-              <h4>
-                <a
-                  className='links'
-                  href='https://constest-api.eggrat1.repl.co/'
-                >
-                  <LaunchIcon style={{ fontSize: "10px" }} /> contests
-                </a>
-              </h4>
-              <p>
-                Its an app which shows all the programming contests going to be
-                held.
-              </p>
-              <br />
-              <h4>
-                <a
-                  className='links'
-                  href='https://alarm-clock.eggrat1.repl.co/'
-                >
-                  <LaunchIcon style={{ fontSize: "10px" }} /> Timer
-                </a>
-              </h4>
-              <p>Its a regular timer but with good looks</p>
+                designs, Static to dynamic all in a year.</span> 
+                Click on Links and headout to a dedicated page for the project.
+            </p>
+                 
+                 {projectsLink.map(item=> (
+                   <CustomLink
+                    title={item.title}
+                    link={item.link}
+                    desc={item.desc}
+                    />
+                   ))}
 
-              <br />
-              <h4>
-                <a className='links' href='https://clone-4884f.web.app/'>
-                  <LaunchIcon style={{ fontSize: "10px" }} /> clone
-                </a>
-              </h4>
-              <p>an amazon clone with cart system based on redux.</p>
             </div>
-            <div className='blur2 fadeIn'>
-              <h1>h</h1>
-            </div>
+
           </div>
         </section>
 
-        <section className='section4  slideIn' id='section4'>
-          <p className='curls'>contact</p>
-          <div className='flex'>
-            <div className='page4 page'>
+{/* //! -------- section 4 ----------------------------------------------------------------------------------------------------------------------------------------- */}
+       
+        <section className='section4  slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section4'>
+          <p className='m-4 font-Zeyada text-2xl'>contact</p>
+          <div className='md:p-16 pr-14 sm:pr-0 pb-10  flex justify-center items-end h-full '>
+            <div className='z-10 '>
               <a
-                href='https://drive.google.com/file/d/1v5O5R9x3_Xb_-7qLE6ba-d4SY2oo8ani/view?usp=sharing'
-                style={{ marginBottom: "3px" }}
+                href='https://drive.google.com/file/d/1BRVS8nDAZQe8YhyNdwr_yN17Th5mY7XJ/view?usp=sharing'
+               
               >
-                <h2 className='prolinks'>Resume</h2>
+                <h2 className='text-2xl font-semibold hover:text-lime transition-all ease-in-out delay-50'>Resume</h2>
               </a>
-              <div className='iconsDiv'>
-                <a className='prolinks' href='https://github.com/eggratanurag'>
+              <div className='h-12 flex items-center gap-4'>
+                <a className='hover:text-lime transition-all ease-in-out delay-50' href='https://github.com/eggratanurag'>
                   <GitHubIcon />
                 </a>
                 <a
-                  className='prolinks'
+                  className='hover:text-lime transition-all ease-in-out delay-50'
                   href='https://www.linkedin.com/in/eggrat/'
                 >
                   <LinkedInIcon />
                 </a>
-                <a className='prolinks' href='https://twitter.com/eggrat__'>
+                <a className='hover:text-lime transition-all ease-in-out delay-50' href='https://twitter.com/eggrat__'>
                   <TwitterIcon />
                 </a>
                 <a
-                  className='prolinks'
+                  className='hover:text-lime transition-all ease-in-out delay-50'
                   href='https://www.behance.net/anuragojha'
                 >
                   <FontAwesomeIcon
@@ -327,37 +291,39 @@ export default function home() {
                 </a>
               </div>
               <form ref={form} onSubmit={sendEmail} className='contactForm'>
-                <h1 className="bigHeading">Contact me.</h1>
-                <p style={{ marginTop: "0" }}>
+                <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">Contact me.</h1>
+                <p className="pb-5">
                   I’m looking for job and also interested in freelance
                   opportunities especially ambitious or large projects. However,
                   if you have other request or question, don’t hesitate to use
                   the form.
                 </p>
-                <div className='emailDiv'>
-                  <div className='inputStyle'>
+                <div className='flex gap-5'>
+                  <div className='inputStyle w-full'>
                     <input
+                      className="p-5 w-full bg-transparent border-none outline-none"
                       type='text'
                       placeholder='name'
                       name='user_name'
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
-                  <div className='inputStyle'>
+                  <div className='inputStyle w-full'>
                     <input
                       type='email'
                       placeholder='email'
                       name='user_email'
-                      className='input_email'
+                      className='w-full p-5  bg-transparent border-none outline-none'
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
-                <div className='inputStyle'>
-                  <input type='text' placeholder='subject' name='subject' />
+                <div className='inputStyle w-full'>
+                  <input className="p-5 w-full bg-transparent border-none outline-none" type='text' placeholder='subject' name='subject' />
                 </div>
-                <div className='inputStyle'>
+                <div className='inputStyle w-full'>
                   <textarea
+                    className="p-5 w-full bg-transparent border-none outline-none"
                     type='text'
                     rows='4'
                     placeholder='type a message'
@@ -369,31 +335,33 @@ export default function home() {
                   type='submit'
                   value='send'
                   disabled={!name || !email || !message}
-                  className='sendButton'
+                  className='rounded-sm h-12 border-none font-montserrat  w-full text-background1 bg-lime hover:enabled:shadow-[0_0px_10px_#d2d86e]  disabled:bg-[#95956e] my-5'
                 >
                   <h3>{text}</h3>
                 </button>
               </form>
             </div>
           </div>
+            <div className='fadeIn absolute top-0 left-0  w-96 h-96 bg-[#D2D86E] rounded-full mix-blend-normal filter blur-[10rem]'></div>
         </section>
 
-        <section className='section5  slideIn' id='section5'>
-          <p className='curls'>blog</p>
-          <div className='flex'>
-            <div className='page5 page'>
+{/* //! ----------- section 5 --------------------------------------------------------------------------------------------------------------------------------------------------- */}
+
+        <section className='section5 slideIn relative flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]' id='section5'>
+          <p className='m-4 font-Zeyada text-2xl'>blog</p>
+          <div className='md:p-16 pr-12 sm:pr-0 pb-1  flex  justify-center items-end'>
+            <div className=''>
               <p>the blog app is under development</p>
             </div>
-            <div className='blur2 fadeIn'>
-              <h1 className=''>h</h1>
-            </div>
+
           </div>
+            <div className='fadeIn absolute bottom-0 left-0  w-1/2 h-1/2 bg-[#D2D86E] rounded-full mix-blend-normal filter blur-[12rem]'></div>
         </section>
       </div>
 
-      <div className='navDiv'>
-        <div className='vl'></div>
-        <ul>
+      <div className=' p-1 pr-0 flex items-center justify-center bg-transparent absolute right-2 sm:pr-12 sm:relative'>
+        <div className='vl border border-1 border-lime h-screen absolute'></div>
+        <ul className="flex flex-col p-0 items-center">
           <HashLink to='/#section1' ref={liRef1} className='li1 li'>
             <InfoTwoToneIcon />
           </HashLink>

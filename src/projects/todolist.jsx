@@ -1,7 +1,9 @@
 import React from "react";
-import Project from "./project";
-import todolistLdPage from "./images/todolistLdPage.png";
-import todolistQr from "./images/todoQr.png";
+import Project from "../project";
+import todolist1 from "../images/todolist1.jpg";
+import todolist2 from "../images/todolist2.jpg";
+
+import todolistQr from "../images/todoQr.png";
 
 export default function todolist() {
   const techIcons = [
@@ -19,20 +21,13 @@ export default function todolist() {
    
   ];
 
+const imageArray = [todolist1, todolist2]
 
-  function dates() {
-    return (
-      <>
-        started - 5/feb/2023.
-        <br />
-        end - 10/feb/2023.
-      </>
-    );
-  }
   return (
     <Project
-      name={"Todolist"}
-      dates={dates()}
+      name="Todolist"
+      started="5/feb/2023"
+      ended="10/feb/2023"
       about={
         <span>
           Its a full-stack app or a "TO DO LIST" application. No it does not use localstorage it has its own database. The good thing is that you can actually use it in real 
@@ -70,7 +65,7 @@ export default function todolist() {
           </ul>
         </span>
       }
-      ldPageImg={todolistLdPage}
+      imageArray={imageArray}
       qrImg={todolistQr}
       link='https://todolist-brre.onrender.com/'
       techIcons={techIcons}
