@@ -309,7 +309,7 @@ html {
 
 
 @media (max-width: 800px) {
-  .mainAnimatedBlob {
+  .blobs {
    display: none;
   }
   .mainBlob {

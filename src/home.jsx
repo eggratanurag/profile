@@ -142,7 +142,7 @@ export default function home() {
         className="container bg-background1 overflow-y-scroll snap-y snap-mandatory"
         id="scrollbar"
       >
-        {/* //! ------- section 1 -----------------------------------------------------------------------------------------------------------------------------------------------------        */}
+        {/* //! ------------------------------------------ section 1 ------------------------------------------------ */}
 
         <section
           style={{ height: "100dvh" }}
@@ -153,8 +153,7 @@ export default function home() {
             about
           </p>
           <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[10rem] mainBlob"></div>
-
-          <div className="blobs mainAnimatedBlob" role="presentation">
+          <div className="blobs " role="presentation">
             <div className="blob-rotate">
               <div className="blob-move">
                 <div className="blob"></div>

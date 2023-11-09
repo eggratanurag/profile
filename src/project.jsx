@@ -57,7 +57,7 @@ export default function Project({
 
   return (
     <div className='flex justify-center items-center text-[#efefef] text-[clamp(12px,1.5vw,15px)] font-poppins bg-background1 relative'>
-      {/* <div className='absolute w-1/2 h-1/2 opacity-70 bg-highlight mix-blend-normal filter blur-[12rem]'>Bloom</div> */}
+      <div className='absolute w-1/2 h-1/2 opacity-70 bg-highlight mix-blend-normal filter blur-[12rem] mainBlob'>Bloom</div>
       <div class="blobs" style={{position: "absolute", top: "18rem"}} role="presentation">
             <div class="blob-rotate">
               <div class="blob-move">
