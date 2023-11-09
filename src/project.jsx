@@ -57,7 +57,24 @@ export default function Project({
 
   return (
     <div className='flex justify-center items-center text-[#efefef] font-poppins bg-background1 relative'>
-      <div className='absolute w-1/2 h-1/2 opacity-70 bg-lime mix-blend-normal filter blur-[12rem]'>Bloom</div>
+      {/* <div className='absolute w-1/2 h-1/2 opacity-70 bg-highlight mix-blend-normal filter blur-[12rem]'>Bloom</div> */}
+      <div class="blobs" role="presentation">
+            <div class="blob-rotate">
+              <div class="blob-move">
+                <div class="blob"></div>
+              </div>
+            </div>
+            <div class="blob-rotate">
+              <div class="blob-move">
+                <div class="blob"></div>
+              </div>
+            </div>
+            <div class="blob-rotate">
+              <div class="blob-move">
+                <div class="blob"></div>
+              </div>
+            </div>
+          </div>
       <div className='projectDiv'>
         <div className='projectName flex gap-3 items-center p-3'>
           <div>
@@ -84,8 +101,8 @@ export default function Project({
           <p>Why scroll through when you can view it LIVE</p>
 
           <div className="flex gap-2 pt-5">
-          <h4><a href={link} className="rounded-full p-2 px-5 text-lime bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">View Live</a></h4>
-          <h4><a href={link} className="rounded-full p-2 px-5 text-lime bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">Code</a></h4>
+          <h4><a href={link} target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">View Live</a></h4>
+          <h4><a href={link} target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">Code</a></h4>
           </div>
          
          </div>
@@ -94,12 +111,12 @@ export default function Project({
         <div className='dates fader p-5 flex flex-col justify-evenly'>
 
           <div>
-          <h2 className="text-2xl sm:text-3xl font-bold pb-2  font-Montserrat">Dates</h2>
+          {/* <h2 className="text-2xl sm:text-3xl font-bold pb-2  font-Montserrat">Dates</h2> */}
           <p><span className="text-lg font-semibold">Started - </span>{started}</p>
           <p><span className="text-lg font-semibold">ended - </span>{ended}</p>
           </div>
          <div>
-          <h2>Technologies</h2>
+          <h2>Technologies used</h2>
           <div className=" mt-2 flex gap-2 flex-wrap">
           {techIcons.map(icon=> (
             <div className="tooltip">

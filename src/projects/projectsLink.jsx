@@ -27,7 +27,7 @@ const ProjectsLink =  [
         desc: "an amazon clone with cart system which uses on redux."
     },
     {
-        title: "Micro Projects",
+        title: " Micro Projects",
         link: "/micros",
         desc: "headout to this page to view almost every micro project I've made using various technologies."
     },

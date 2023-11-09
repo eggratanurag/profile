@@ -9,12 +9,14 @@ export default {
       colors: {
         background1: "#100f0f",
         background2: "rgb(241, 241, 241, 0.1)",
-        background3: "rgb(241, 241, 241, 0.05)",
+        background3: "rgb(241, 241, 241, 0.03)",
         background4: "rgb(241, 241, 241, 0.2)",
-        highlight: "#697C37",
-        highlight2: "#b6b681",
-        lime: "#D2D86E",
-        offGreen: "#95956e"
+        highlight: "#917fb3",
+        highlight2: "#d1cde5",
+        lime: "#3e3a4d",
+        curse: "#addbdf",
+        offGreen: "#928daa",
+        pageName: "#addbdf"
         // green: "#44924c"
       },
 

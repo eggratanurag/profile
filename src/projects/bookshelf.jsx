@@ -86,7 +86,7 @@ const imageArray = [bookshelf1, bookshelf2, bookshelf3, bookshelf4, bookshelf5]
       }
       imageArray = {imageArray}
       qrImg={bookshelfQr}
-      link='https://kitabghar.onrender.com/'
+      link='https://busy-lime-sweatsuit.cyclic.cloud/'
       techIcons={techIcons}
     />
   );
