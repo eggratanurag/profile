@@ -154,7 +154,7 @@ export default function home() {
           </p>
           <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[10rem] mainBlob"></div>
 
-          <div className="blobs" role="presentation">
+          <div className="blobs mainAnimatedBlob" role="presentation">
             <div className="blob-rotate">
               <div className="blob-move">
                 <div className="blob"></div>

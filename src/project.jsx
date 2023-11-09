@@ -56,9 +56,9 @@ export default function Project({
 //    
 
   return (
-    <div className='flex justify-center items-center text-[#efefef] font-poppins bg-background1 relative'>
+    <div className='flex justify-center items-center text-[#efefef] text-[clamp(12px,1.5vw,15px)] font-poppins bg-background1 relative'>
       {/* <div className='absolute w-1/2 h-1/2 opacity-70 bg-highlight mix-blend-normal filter blur-[12rem]'>Bloom</div> */}
-      <div class="blobs" role="presentation">
+      <div class="blobs" style={{position: "absolute", top: "18rem"}} role="presentation">
             <div class="blob-rotate">
               <div class="blob-move">
                 <div class="blob"></div>
@@ -83,7 +83,7 @@ export default function Project({
               <ArrowBackIcon />
             </button>
           </div>
-          <h1 className="curveIn text-4xl  font-bold font-Montserrat">{name}</h1>
+          <h1 className="curveIn text-4xl  font-black font-Montserrat">{name}</h1>
           
         </div>
         <main className="fader flex flex-col items-center justify-center relative">
@@ -128,17 +128,17 @@ export default function Project({
          </div>
         </div>
         <div className='info popin p-5'>
-          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">What is it about?</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">What is it about?</h2>
           <br />
           <p>{about}</p>
         </div>
         <div className='idea p-5 popin'>
-          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">Idea behind it</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">Idea behind it</h2>
           <br />
           <p>{idea}</p>
         </div>
         <div className='journey p-5 fader'>
-          <h2 className="text-2xl sm:text-3xl font-bold  font-Montserrat">Problems and Tackling</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">Problems and Tackling</h2>
           <br />
           {journey}
         </div>

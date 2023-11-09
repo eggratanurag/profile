@@ -142,7 +142,7 @@ html {
 .blobs {
 
   position: absolute;
-  bottom: 3rem;
+  top: 3rem;
   filter: blur(var(--blob-blur));
 }
 
@@ -309,7 +309,7 @@ html {
 
 
 @media (max-width: 800px) {
-  .blobs {
+  .mainAnimatedBlob {
    display: none;
   }
   .mainBlob {
