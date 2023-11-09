@@ -137,7 +137,7 @@ export default function home() {
   }, []);
   //
   return (
-    <div className="h-screen  flex text-[clamp(11px,1.5vw,15px)] text-[#efefef] font-poppins bg-background1">
+    <div className="h-screen  flex text-[clamp(12px,1.5vw,15px)] text-[#efefef] font-poppins bg-background1">
       <div
         className="container bg-background1 overflow-y-scroll snap-y snap-mandatory"
         id="scrollbar"
@@ -152,29 +152,29 @@ export default function home() {
           <p className=" m-4 text-curse font-Zeyada text-pageName text-2xl">
             about
           </p>
-          {/* <div className="fadeIn absolute bottom-32  w-1/2 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[10rem] blob"></div> */}
+          <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[10rem] mainBlob"></div>
 
-          <div class="blobs" role="presentation">
-            <div class="blob-rotate">
-              <div class="blob-move">
-                <div class="blob"></div>
+          <div className="blobs" role="presentation">
+            <div className="blob-rotate">
+              <div className="blob-move">
+                <div className="blob"></div>
               </div>
             </div>
-            <div class="blob-rotate">
-              <div class="blob-move">
-                <div class="blob"></div>
+            <div className="blob-rotate">
+              <div className="blob-move">
+                <div className="blob"></div>
               </div>
             </div>
-            <div class="blob-rotate">
-              <div class="blob-move">
-                <div class="blob"></div>
+            <div className="blob-rotate">
+              <div className="blob-move">
+                <div className="blob"></div>
               </div>
             </div>
           </div>
 
           <div className="pr-14 sm:pr-0 md:p-16 pb-1  flex justify-center items-end  h-full">
             <div className="z-10 ">
-              <h1 className="text-4xl sm:text-8xl font-bold font-Montserrat pb-5">
+              <h1 className="text-4xl sm:text-8xl font-black font-Montserrat pb-5">
                 Me, Myself & I
               </h1>
 
@@ -228,7 +228,7 @@ export default function home() {
 
           <div className="md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full ">
             <div className="z-10 ">
-              <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">
+              <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                 I've
               </h1>
               <h2>
@@ -295,7 +295,7 @@ export default function home() {
           </p>
           <div className="md:p-16 pr-14 sm:pr-0 pb-1 flex items-end relative h-full ">
             <div className="z-10 flex flex-col gap-2 sm:gap-5">
-              <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">
+              <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                 Projects.
               </h1>
               <p className="faltu">
@@ -371,7 +371,7 @@ export default function home() {
                 </a>
               </div>
               <form ref={form} onSubmit={sendEmail} className="contactForm">
-                <h1 className="text-4xl sm:text-8xl font-bold pb-5 font-Montserrat">
+                <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                   Contact me.
                 </h1>
                 <p className="pb-5">

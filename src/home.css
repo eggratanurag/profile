@@ -32,6 +32,9 @@
   opacity: 0.5;
 }
 
+.mainBlob {
+  display: none;
+}
 a,
 input[type="file"] {
   -webkit-tap-highlight-color: transparent !important;
@@ -304,6 +307,16 @@ html {
 	filter: blur(50px);
 }
 
+
+@media (max-width: 800px) {
+  .blobs {
+   display: none;
+  }
+  .mainBlob {
+    display: block;
+  }
+
+}
 
 
 
