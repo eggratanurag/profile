@@ -152,7 +152,7 @@ export default function home() {
           <p className=" m-4 text-curse font-Zeyada text-pageName text-2xl">
             about
           </p>
-          <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[10rem] mainBlob"></div>
+          <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div>
           <div className="blobs " role="presentation">
             <div className="blob-rotate">
               <div className="blob-move">
@@ -278,7 +278,7 @@ export default function home() {
                 ))}
               </div>
             </div>
-            <div className="fadeIn absolute -left-40 -bottom-40  w-full h-1/2 bg-[#928daa] rounded-full mix-blend-normal filter blur-[12rem]"></div>
+            <div className="fadeIn absolute -left-40 -bottom-40  w-2/3 h-1/2 bg-[#928daa] rounded-full mix-blend-normal filter blur-[7rem]"></div>
           </div>
         </section>
 
@@ -428,7 +428,7 @@ export default function home() {
               </form>
             </div>
           </div>
-          <div className="fadeIn absolute top-0 left-0  w-96 h-96 bg-[#928daa] rounded-full mix-blend-normal filter blur-[10rem]"></div>
+          <div className="fadeIn absolute top-0 left-0  w-96 h-96 bg-[#928daa] rounded-full mix-blend-normal filter blur-[8rem]"></div>
         </section>
 
         {/* //! ----------- section 5 --------------------------------------------------------------------------------------------------------------------------------------------------- */}
@@ -454,8 +454,9 @@ export default function home() {
         <ul className="flex relative flex-col p-0 items-center">
           <div
             ref={navCircle}
-            className="absolute border top-[-24px] border-1 border-highlight h-[52px] w-[52px]   rounded-full  transition-all ease-in-out delay-20  present block"
-          ></div>
+            className=" absolute border top-[-24px] border-1 border-highlight h-[52px] w-[52px]   rounded-full  transition-all ease-in-out delay-20  present block"
+          >
+          </div>
 
           <HashLink to="/#section1" ref={liRef1} className="li1 li">
             <div>

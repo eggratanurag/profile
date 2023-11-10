@@ -8,6 +8,7 @@
   }
 }
 
+
 .inputStyle::after {
   content: " ";
   background: #181616;
@@ -25,8 +26,9 @@
 }
 
 .fadeIn {
-  opacity: 0;
-  transition: opacity 2000ms ease-in;
+  opacity: 0.4;
+  will-change: transform;
+  transition: opacity 500ms ease;
 }
 .fadeIn.appear {
   opacity: 0.5;
@@ -77,18 +79,7 @@ select:-webkit-autofill {
   background-color: transparent;
   color: #c1a9f4;
 }
-/* .li.present {
-  border: none;
-  box-shadow: inset 0px 0px 10px #c1a9f4  , 0px 0px 10px #c1a9f4;
-  transition: 0.1s ease-in-out 0s;
-  transition-property: box-shadow;
-  cursor: pointer;
-  outline: 2px solid #c1a9f4  ;
-  background-color: #100f0f;
-  width: 50px;
-  height: 50px;
-  color: #c1a9f4;
-} */
+
 .li:hover {
   transition: all 0.3s ease 0s;
   color: #928daa;
@@ -140,7 +131,6 @@ html {
 }
 
 .blobs {
-
   position: absolute;
   top: 3rem;
   filter: blur(var(--blob-blur));
@@ -252,19 +242,7 @@ html {
   box-sizing: border-box;
 }
 
-/* html {
-  color-scheme: dark light;
-  background-color: hsl(216deg, 100%, 2%);
-  height: 100%;
-} */
 
-/* body {
-  display: grid;
-  place-content: center;
-  height: 100%;
-  font-family: system-ui, sans-serif;
-  line-height: 1.375;
-} */
 
 
 /* ============================ navigation circle animation ============================ */
@@ -317,6 +295,8 @@ html {
   }
 
 }
+
+
 
 
 
