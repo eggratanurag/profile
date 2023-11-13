@@ -3,6 +3,7 @@ import Carousel from "./components/carousel";
 import "./project.css";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import Fade from "react-reveal/Fade";
 
 export default function Project({
   name,
@@ -19,41 +20,6 @@ export default function Project({
 
   
    const Navigate = useNavigate();
-
-   const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -150px 0px",
-  };
-
-  const appearOnScroll = new IntersectionObserver(function (
-    entries,
-    appearOnScroll
-  ) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-      }
-    });
-  },
-  appearOptions);
-
-  useEffect(() => {
-   
-    const faders = document.getElementsByClassName("fader");
-    const popins = document.getElementsByClassName("popin");
-    const slider = document.getElementsByClassName("curveIn")[0];
-    appearOnScroll.observe(slider);
-    for(var fader of faders) {
-      appearOnScroll.observe(fader);
-    }
-    for(var popin of popins) {
-      appearOnScroll.observe(popin);
-    }
-  }, []);
-//    
 
   return (
     <div className='flex justify-center items-center text-[#efefef] text-[clamp(12px,1.5vw,15px)] font-poppins bg-background1 relative'>
@@ -83,15 +49,19 @@ export default function Project({
               <ArrowBackIcon />
             </button>
           </div>
-          <h1 className="curveIn text-4xl  font-black font-Montserrat">{name}</h1>
+          <h1 className=" text-4xl  font-black font-Montserrat">{name}</h1>
           
         </div>
-        <main className="fader flex flex-col items-center justify-center relative">
+
+        <Fade bottom delay={100} distance="50px">
+        <main className=" flex flex-col items-center justify-center relative">
         
         <Carousel imageArray={imageArray} />
           
         </main>
-        <div className='qr fader flex flex-col items-left justify-evenly p-5'>
+        </Fade>
+        <Fade bottom delay={100} distance="50px">
+        <div className='qr  flex flex-col items-left justify-evenly p-5'>
           <div >
           <img src={qrImg} className="w-32 h-32 object-contain rounded-md border border-1 border-background2" alt='qr' />
           <p >Scan QR to view it on phone.</p>
@@ -107,8 +77,9 @@ export default function Project({
          
          </div>
         </div>
-
-        <div className='dates fader p-5 flex flex-col justify-evenly'>
+        </Fade>
+        <Fade bottom delay={100} distance="50px">
+        <div className='dates  p-5 flex flex-col justify-evenly'>
 
           <div>
           {/* <h2 className="text-2xl sm:text-3xl font-bold pb-2  font-Montserrat">Dates</h2> */}
@@ -127,21 +98,29 @@ export default function Project({
           </div>
          </div>
         </div>
-        <div className='info popin p-5'>
+         </Fade>
+         <Fade bottom delay={200} distance="20px">
+        <div className='info  p-5'>
           <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">What is it about?</h2>
           <br />
           <p>{about}</p>
         </div>
-        <div className='idea p-5 popin'>
+        </Fade>
+        <Fade bottom delay={200} distance="20px">
+        <div className='idea p-5 '>
           <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">Idea behind it</h2>
           <br />
           <p>{idea}</p>
         </div>
-        <div className='journey p-5 fader'>
+        </Fade>
+        <Fade bottom delay={50} distance="20px">
+        <div className='journey p-5 '>
           <h2 className="text-2xl sm:text-3xl font-extrabold  font-Montserrat">Problems and Tackling</h2>
           <br />
           {journey}
         </div>
+        </Fade>
+
       </div>
     </div>
   );
