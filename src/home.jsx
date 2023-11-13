@@ -527,34 +527,37 @@ export default function home() {
             </div>
           </HashLink>
 
-
+          <Fade bottom delay={800} distance="30px">
           <HashLink to="/#section2" ref={liRef2} className="li2 li">
             <div>
               <LightbulbTwoToneIcon />
             </div>
           </HashLink>
-
+          </Fade>
+          <Fade bottom delay={850} distance="30px">
 
           <HashLink to="/#section3" ref={liRef3} className="li3 li">
             <div>
               <WorkHistoryTwoToneIcon />
             </div>
           </HashLink>
-
+          </Fade>
+          <Fade bottom delay={900} distance="30px">
 
           <HashLink to="/#section4" ref={liRef4} className="li4 li">
             <div>
               <EmailTwoToneIcon />
             </div>
           </HashLink>
-
+          </Fade>
+          <Fade bottom delay={950} distance="30px">
 
           <HashLink to="#section5" ref={liRef5} className="li5 li">
             <div>
               <BookTwoToneIcon />
             </div>
           </HashLink>
-
+          </Fade>
 
         </ul>
 
