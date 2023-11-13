@@ -192,16 +192,16 @@ export default function home() {
                 </p>
               </Fade>
 
-              <Fade bottom delay={700}>
+              <Fade bottom delay={500} distance="80px">
                 <h2 className="pb-5">
                   am <span className="">Anurag </span> and I'm a MERN Stack
                   Developer currently based in Gurugram.
                 </h2>
               </Fade>
-              <Fade bottom delay={700}>
+              <Fade bottom delay={500} distance="80px">
                 <p className="pb-5">Passionate about Web Development.</p>
               </Fade>
-              <Fade bottom delay={650}>
+              <Fade bottom delay={550} distance="80px" >
                 <p className="text-highlight2   pb-5">
                   My interest falls more on playing with CSS and bringing out
                   something worthwhile. Most of my time is spent on creating
@@ -212,7 +212,7 @@ export default function home() {
                   with positive people.
                 </p>
               </Fade>
-              <Fade bottom delay={900}>
+              <Fade bottom delay={800} distance="50px">
                 <div className="w-[min(98%,25rem)]  p-2 flex  items-center bg-background3 border border-1 border-background2 rounded-full ">
                   <img
                     className="w-16 h-16 square mr-2  object-cover rounded-full"
@@ -248,18 +248,18 @@ export default function home() {
 
           <div className="md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full ">
             <div className="z-10 ">
-              <Fade bottom delay={200}>
+              <Fade bottom delay={200} distance="50px">
                 <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                   I've
                 </h1>
               </Fade>
-              <Fade bottom delay={500}>
+              <Fade bottom delay={200} distance="50px">
                 <h2>
                   got experience of more than 1 year of working professionally.
                 </h2>
               </Fade>
               <br />
-              <Fade bottom delay={200}>
+              <Fade bottom delay={200} distance="50px">
                 <p>
                   Ive created apps using
                   <span className="text-highlight">
@@ -292,7 +292,7 @@ export default function home() {
                   skills.
                 </p>
               </Fade>
-              <Fade bottom delay={400}>
+              <Fade bottom delay={200} distance="50px">
                 <div className="mt-2 sm:mt-8 flex gap-3 sm:gap-8 flex-wrap">
                   {SkillIcons.map((icon, index) => (
                     <div className="tooltip" key={index}>
@@ -326,12 +326,12 @@ export default function home() {
 
           <div className="md:p-16 pr-14 sm:pr-0 pb-1 flex items-end relative h-full ">
             <div className="z-10 flex flex-col gap-2 sm:gap-5">
-              <Fade bottom delay={200}>
+              <Fade bottom delay={200} distance="50px">
                 <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                   Projects.
                 </h1>
               </Fade>
-              <Fade bottom delay={400}>
+              <Fade bottom delay={200}  distance="50px">
                 <p className="faltu">
                   <span className="hidden sm:block">
                     I have created many apps with different functionalities and
@@ -343,7 +343,7 @@ export default function home() {
               </Fade>
               {projectsLink.map((item, index) => (
                 <React.Fragment key={index}>
-                  <Fade bottom delay={400}>
+                  <Fade bottom delay={300} distance="50px">
                     <CustomLink
                       title={item.title}
                       link={item.link}
@@ -368,7 +368,7 @@ export default function home() {
           </Fade>
           <div className="md:p-16 pr-14 sm:pr-0 pb-10  flex justify-center items-end h-full ">
             <div className="z-10 ">
-              <Fade bottom delay={400}>
+              <Fade bottom delay={200} distance="50px">
                 <a
                   href="https://drive.google.com/file/d/1BRVS8nDAZQe8YhyNdwr_yN17Th5mY7XJ/view?usp=sharing"
                   target="_blank"
@@ -379,7 +379,7 @@ export default function home() {
                 </a>
               </Fade>
 
-              <Fade bottom delay={400}>
+              <Fade bottom delay={200} distance="50px">
                 <div className="h-12 flex items-center gap-4">
                   <a
                     className="hover:text-highlight transition-all ease-in-out delay-50"
@@ -416,12 +416,12 @@ export default function home() {
               </Fade>
 
               <form ref={form} onSubmit={sendEmail} className="contactForm">
-                <Fade bottom delay={300}>
+                <Fade bottom delay={200} distance="50px">
                   <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
                     Contact me.
                   </h1>
                 </Fade>
-                <Fade bottom delay={400}>
+                <Fade bottom delay={200} distance="50px">
                   <p className="pb-5">
                     I’m looking for job and also interested in freelance
                     opportunities especially ambitious or large projects.
@@ -429,7 +429,7 @@ export default function home() {
                     hesitate to use the form.
                   </p>
                 </Fade>
-                <Fade bottom delay={400}>
+                <Fade bottom delay={200} distance="50px">
                   <div className="flex gap-5">
                     <div className="inputStyle w-full">
                       <input
@@ -451,7 +451,7 @@ export default function home() {
                     </div>
                   </div>
                 </Fade>
-                <Fade bottom delay={400}>
+                <Fade bottom delay={200} distance="50px">
                   <div className="inputStyle w-full">
                     <input
                       className="p-5 w-full bg-transparent border-none outline-none"
@@ -461,7 +461,7 @@ export default function home() {
                     />
                   </div>
                 </Fade>
-                <Fade bottom delay={400}>
+                <Fade bottom delay={200} distance="50px">
                   <div className="inputStyle w-full">
                     <textarea
                       className="p-5 w-full bg-transparent resize-none border-none outline-none"
@@ -473,7 +473,7 @@ export default function home() {
                     />
                   </div>
                 </Fade>
-                <Fade bottom delay={400}>
+                <Fade bottom delay={200} distance="50px">
                   <button
                     type="submit"
                     value="send"
@@ -504,7 +504,7 @@ export default function home() {
               <p>the blog app is under development</p>
             </div>
           </div>
-          <div className="fadeIn absolute bottom-0 left-0  w-1/2 h-1/2 bg-[#928daa] rounded-full mix-blend-normal filter blur-[12rem]"></div>
+          <div className="fadeIn absolute bottom-0 left-0  w-1/2 h-1/2 bg-[#928daa] rounded-full mix-blend-normal filter blur-[5rem]"></div>
         </section>
       </div>
 

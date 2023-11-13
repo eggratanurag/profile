@@ -68,8 +68,10 @@ select:-webkit-autofill {
   cursor: pointer;
 }
 .hightlightIcon {
-  transition: all 0.5s ease-in-out 0s;
-  color: #c1a9f4
+  transition: all 0.2s ease-in-out 0s;
+  color: #d1cde5;
+
+
 }
 .present {
   cursor: pointer;
