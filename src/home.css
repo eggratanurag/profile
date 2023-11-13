@@ -56,7 +56,8 @@ select:-webkit-autofill {
 
 .li {
   color: #3e3a4d  ;
-  background-color: #100f0f;
+  background-color: transparent;
+  /* background-color: #100f0f; */
   z-index: 1;
   width: 50px;
   height: 50px;
@@ -68,6 +69,7 @@ select:-webkit-autofill {
   cursor: pointer;
 }
 .hightlightIcon {
+  background-color: #100f0f;
   transition: all 0.2s ease-in-out 0s;
   color: #d1cde5;
 
@@ -284,7 +286,7 @@ html {
 }
 
 .block:after {
-	filter: blur(50px);
+	filter: blur(30px);
 }
 
 

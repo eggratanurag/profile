@@ -55,6 +55,7 @@ export default function home() {
       );
   };
 
+  const base = [1,2,3,4,5]
   const appearOptions = {
     threshold: 0.65,
     rootMargin: "0px 0px -100px 0px",
@@ -508,14 +509,17 @@ export default function home() {
         </section>
       </div>
 
-      <div className=" p-1 pr-0 flex items-center justify-center bg-transparent absolute right-2 sm:pr-12 sm:relative">
-        <div className="vl border border-1 border-lime h-screen absolute"></div>
+      <div className=" p-1 pr-0 flex flex-col items-center justify-center bg-transparent absolute right-2 sm:pr-12 sm:relative">
+        {/* <div className="vl border border-1 border-lime h-screen absolute"></div> */}
 
+
+        
         <ul className="flex relative flex-col p-0 items-center">
           <div
             ref={navCircle}
             className=" absolute border top-[-24px] border-1 border-highlight h-[52px] w-[52px]   rounded-full  transition-all ease-in-out delay-20  present block"
           ></div>
+
 
           <HashLink to="/#section1" ref={liRef1} className="li1 li">
             <div>
@@ -523,11 +527,13 @@ export default function home() {
             </div>
           </HashLink>
 
+
           <HashLink to="/#section2" ref={liRef2} className="li2 li">
             <div>
               <LightbulbTwoToneIcon />
             </div>
           </HashLink>
+
 
           <HashLink to="/#section3" ref={liRef3} className="li3 li">
             <div>
@@ -535,18 +541,24 @@ export default function home() {
             </div>
           </HashLink>
 
+
           <HashLink to="/#section4" ref={liRef4} className="li4 li">
             <div>
               <EmailTwoToneIcon />
             </div>
           </HashLink>
 
+
           <HashLink to="#section5" ref={liRef5} className="li5 li">
             <div>
               <BookTwoToneIcon />
             </div>
           </HashLink>
+
+
         </ul>
+
+
       </div>
     </div>
   );
