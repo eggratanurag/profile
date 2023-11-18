@@ -55,7 +55,7 @@ export default function home() {
       );
   };
 
-  const base = [1,2,3,4,5]
+  const base = [1, 2, 3, 4, 5];
   const appearOptions = {
     threshold: 0.65,
     rootMargin: "0px 0px -100px 0px",
@@ -202,7 +202,7 @@ export default function home() {
               <Fade bottom delay={500} distance="80px">
                 <p className="pb-5">Passionate about Web Development.</p>
               </Fade>
-              <Fade bottom delay={550} distance="80px" >
+              <Fade bottom delay={550} distance="80px">
                 <p className="text-highlight2   pb-5">
                   My interest falls more on playing with CSS and bringing out
                   something worthwhile. Most of my time is spent on creating
@@ -255,12 +255,46 @@ export default function home() {
                 </h1>
               </Fade>
               <Fade bottom delay={200} distance="50px">
-                <h2>
-                  got experience of more than 1 year of working professionally.
-                </h2>
+                <h2>got experience of 1 year of working professionally.</h2>
               </Fade>
               <br />
               <Fade bottom delay={200} distance="50px">
+                <ul>
+                  <li className="mb-3">
+                    <div className="flex items-center gap-2">
+                    <h2 className="font-bold inline-block text-highlight2 mb-1">
+                      Internship at Rootandleaves -{" "}
+                    </h2>
+                    <p className="text-[12px]"> {`(May - Nov, 2023)`}</p>
+                    </div>
+                    <p>
+                      Completed a dynamic 6-month internship at Rootandleaves,
+                      where I excelled in frontend development for the mx360
+                      project. Showcased proficiency in client interactions,
+                      consistently met deadlines, and earned recognition as the
+                      best performer for a month. Additionally, contributed to
+                      ongoing project maintenance.
+                    </p>
+                  </li>
+                  <li className="mb-3">
+                    <div className="flex items-center gap-2">
+                    <h2 className="font-bold inline-block text-highlight2 mb-1">
+                      Freelance Project -{" "}
+                    </h2>
+                    <span className="text-[12px]">
+                    {`(Feb - Apr, 2023)`}
+                    </span>
+                    </div>
+                    <p>
+                      Executed a freelance MERN stack project for a school,
+                      delivering a comprehensive portfolio website with multiple
+                      pages and an intuitive admin dashboard for seamless
+                      content management.
+                    </p>
+                  </li>
+                </ul>
+              </Fade>
+              {/* <Fade bottom delay={200} distance="50px">
                 <p>
                   Ive created apps using
                   <span className="text-highlight">
@@ -285,14 +319,8 @@ export default function home() {
                   <span className="text-highlight"> Passport.js. </span>I am
                   also familiar with{" "}
                   <span className="text-highlight"> git, mongoose.</span>
-                  <br />
-                  <br />
-                  Previously, I've worked as a graphic designer in a company and
-                  I've also worked as a freelancer. I have no prior experience
-                  of working in a company or in a team, I am a fresher but with
-                  skills.
                 </p>
-              </Fade>
+              </Fade> */}
               <Fade bottom delay={200} distance="50px">
                 <div className="mt-2 sm:mt-8 flex gap-3 sm:gap-8 flex-wrap">
                   {SkillIcons.map((icon, index) => (
@@ -332,7 +360,7 @@ export default function home() {
                   Projects.
                 </h1>
               </Fade>
-              <Fade bottom delay={200}  distance="50px">
+              <Fade bottom delay={200} distance="50px">
                 <p className="faltu">
                   <span className="hidden sm:block">
                     I have created many apps with different functionalities and
@@ -371,7 +399,7 @@ export default function home() {
             <div className="z-10 ">
               <Fade bottom delay={200} distance="50px">
                 <a
-                  href="https://drive.google.com/file/d/1BRVS8nDAZQe8YhyNdwr_yN17Th5mY7XJ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1fZg-8UvsoYKA8Jm5wBDp-gGzazl3NPjC/view?usp=sharing"
                   target="_blank"
                 >
                   <h2 className="text-2xl font-semibold hover:text-highlight transition-all ease-in-out delay-50">
@@ -424,7 +452,7 @@ export default function home() {
                 </Fade>
                 <Fade bottom delay={200} distance="50px">
                   <p className="pb-5">
-                    I’m looking for job and also interested in freelance
+                    Currently I’m Working as Full time and looking for some freelance
                     opportunities especially ambitious or large projects.
                     However, if you have other request or question, don’t
                     hesitate to use the form.
@@ -512,14 +540,11 @@ export default function home() {
       <div className=" p-1 pr-0 flex flex-col items-center justify-center bg-transparent absolute right-2 sm:pr-12 sm:relative">
         {/* <div className="vl border border-1 border-lime h-screen absolute"></div> */}
 
-
-        
         <ul className="flex relative flex-col p-0 items-center">
           <div
             ref={navCircle}
             className=" absolute border top-[-24px] border-1 border-highlight h-[52px] w-[52px]   rounded-full  transition-all ease-in-out delay-20  present block"
           ></div>
-
 
           <HashLink to="/#section1" ref={liRef1} className="li1 li">
             <div>
@@ -528,40 +553,34 @@ export default function home() {
           </HashLink>
 
           <Fade bottom delay={800} distance="30px">
-          <HashLink to="/#section2" ref={liRef2} className="li2 li">
-            <div>
-              <LightbulbTwoToneIcon />
-            </div>
-          </HashLink>
+            <HashLink to="/#section2" ref={liRef2} className="li2 li">
+              <div>
+                <LightbulbTwoToneIcon />
+              </div>
+            </HashLink>
           </Fade>
           <Fade bottom delay={850} distance="30px">
-
-          <HashLink to="/#section3" ref={liRef3} className="li3 li">
-            <div>
-              <WorkHistoryTwoToneIcon />
-            </div>
-          </HashLink>
+            <HashLink to="/#section3" ref={liRef3} className="li3 li">
+              <div>
+                <WorkHistoryTwoToneIcon />
+              </div>
+            </HashLink>
           </Fade>
           <Fade bottom delay={900} distance="30px">
-
-          <HashLink to="/#section4" ref={liRef4} className="li4 li">
-            <div>
-              <EmailTwoToneIcon />
-            </div>
-          </HashLink>
+            <HashLink to="/#section4" ref={liRef4} className="li4 li">
+              <div>
+                <EmailTwoToneIcon />
+              </div>
+            </HashLink>
           </Fade>
           <Fade bottom delay={950} distance="30px">
-
-          <HashLink to="#section5" ref={liRef5} className="li5 li">
-            <div>
-              <BookTwoToneIcon />
-            </div>
-          </HashLink>
+            <HashLink to="#section5" ref={liRef5} className="li5 li">
+              <div>
+                <BookTwoToneIcon />
+              </div>
+            </HashLink>
           </Fade>
-
         </ul>
-
-
       </div>
     </div>
   );

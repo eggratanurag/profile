@@ -2,9 +2,14 @@ import React from 'react';
 
 const ProjectsLink =  [
     {
+        title: " MX360",
+        link: "/mx360",
+        desc: "Led the end-to-end development of a robust analytics tool at Rootandleaves, steering the entire frontend architecture. Enabled data-driven insights, streamlined campaign optimization, and empowered decision-making through advanced data analysis and Visualization (May - Sept 2023 in Rootandleaves)"
+    },
+    {
         title: " The Prestige International School",
         link: "/pis",
-        desc: "Its a full-stack school website app in which most of the data is manipulatable."
+        desc: "Single-handedly crafted a dynamic school website featuring an admin dashboard for content management (MERN Project)."
     },
     {
         title: " Bookshelf",
@@ -14,22 +19,12 @@ const ProjectsLink =  [
     {
         title: " Todolist",
         link: "/todolist",
-        desc: "a todo list with the functionality of creating different lists for different works."
-    },
-    {
-        title: " hackathon Submission",
-        link: "/hackathon-submission",
-        desc: " a front-end app with basic CRUD operations, sorting and searching"
-    },
-    {
-        title: "Amazon Clone",
-        link: "https://clone-4884f.web.app/",
-        desc: "an amazon clone with cart system which uses on redux."
+        desc: "a todo list with the functionality of creating different lists for different work."
     },
     {
         title: " Micro Projects",
         link: "/micros",
-        desc: "headout to this page to view almost every micro project I've made using various technologies."
+        desc: "headout to this page to view almost every micro project I've made."
     },
 ]
 
