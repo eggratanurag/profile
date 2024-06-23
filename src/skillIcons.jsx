@@ -12,7 +12,7 @@ import HtmlIcon from "./icons/htmlIcon.png"
 import VueIcon from "./icons/vueIcon.png"
 import GraphQlIcon from "./icons/graphQlIcon.png"
 import ChakraUiIcon from "./icons/chakraUiIcon.png"
-import ThreeJsIcon from "./icons/ThreeJsIcon.png"
+import ThreeJsIcon from "./icons/threeJsIcon.png"
 
 const skillIcons = [
   { "Javascript": JavascriptIcon },
