@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../project";
-import todolist1 from "../images/todolist1.jpg";
-import todolist2 from "../images/todolist2.jpg";
+import todolist1 from "../images/todolist1.webp";
+import todolist2 from "../images/todolist2.webp";
 
 import todolistQr from "../images/todoQr.png";
 

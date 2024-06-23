@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../project";
-import hackathon1 from "../images/hackathon1.jpg";
-import hackathon2 from "../images/hackathon2.jpg";
+import hackathon1 from "../images/hackathon1.webp";
+import hackathon2 from "../images/hackathon2.webp";
 import hackathonQr from "../images/hackathonQr.png";
 
 export default function Hackthon() {

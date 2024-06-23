@@ -34,7 +34,6 @@ const Carousel = ({imageArray}) => {
     <>
       {/* <!--Carousel items--> */}
       <div
-      style={{maskImage: "linear-gradient(#000, rgba(0,0,0,0.2)"}}
        className="h-full rounded-2xl ">
         <div className='h-full '>
          { imageArray?

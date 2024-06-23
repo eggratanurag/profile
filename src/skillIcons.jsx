@@ -9,18 +9,26 @@ import ReduxIcon from "./icons/reduxIcon.png"
 import TailwindCssIcon from "./icons/tailwindIcon.png"
 import BootstrapIcon from "./icons/bootstrapIcon.png"
 import HtmlIcon from "./icons/htmlIcon.png"
+import VueIcon from "./icons/VueIcon.png"
+import GraphQlIcon from "./icons/graphQlIcon.png"
+import ChakraUiIcon from "./icons/chakraUiIcon.png"
+import ThreeJsIcon from "./icons/ThreeJsIcon.png"
 
 const skillIcons = [
   { "Javascript": JavascriptIcon },
   { "React.js": ReactIcon },
+  { "Vue.js": VueIcon },
+  { "Three.js": ThreeJsIcon },
   { "CSS 3": CssIcon },
   {"Html": HtmlIcon},
   {"redux": ReduxIcon},
   {"tailwindCSS": TailwindCssIcon},
   {"Bootstrap": BootstrapIcon},
+  {"Chakra-ui": ChakraUiIcon},
   {"MongoDB": MongodbIcon,},
   { "Express.js": ExpressIcon},
   { "Node.js": NodeIcon },
+  { "Graph-ql": GraphQlIcon },
   
 ];
 export default skillIcons;

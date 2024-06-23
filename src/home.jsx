@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import CustomLink from "./components/customLink";
 import projectsLink from "./projects/projectsLink";
+import { Link } from "react-router-dom";
 import "./home.css";
 import InfoTwoToneIcon from "@mui/icons-material/InfoTwoTone";
 import WorkHistoryTwoToneIcon from "@mui/icons-material/WorkHistoryTwoTone";
@@ -17,7 +18,10 @@ import { HashLink } from "react-router-hash-link";
 import SkillIcons from "./skillIcons.jsx";
 import ProfileImg from "./images/profileImg.jpeg";
 import EastIcon from "@mui/icons-material/East";
-import Fade from "react-reveal/Fade";
+import {Fade, Slide} from "react-awesome-reveal";
+import Marquee from "react-fast-marquee";
+import arrow from './gifs/arrow.png';
+
 
 export default function home() {
   const [text, setText] = useState("Send Message");
@@ -70,48 +74,33 @@ export default function home() {
   const transform4 = `translateY(${400}px)`;
   const transform5 = `translateY(${500}px)`;
 
-  const navFunction = new IntersectionObserver(function (
-    entries,
-    appearOnScroll
-  ) {
-    console.log(
-      navCircle.style?.transform,
-      navCircle.current.style.transform,
-      "navCircle.style.transform "
-    );
+  const navFunction = new IntersectionObserver(function ( entries, appearOnScroll ) {
+
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) {
         return;
       } else {
         entry.target.classList[0] === "section1"
-          ? ((navCircle.current.style.transform = transform1),
-            liRef1.current.classList.add("hightlightIcon"))
+          ? ((navCircle.current.style.transform = transform1), liRef1.current.classList.add("hightlightIcon"))
           : liRef1.current.classList.remove("hightlightIcon");
         entry.target.classList[0] === "section2"
-          ? ((navCircle.current.style.transform = transform2),
-            liRef2.current.classList.add("hightlightIcon"))
+          ? ((navCircle.current.style.transform = transform2), liRef2.current.classList.add("hightlightIcon"))
           : liRef2.current.classList.remove("hightlightIcon");
         entry.target.classList[0] === "section3"
-          ? ((navCircle.current.style.transform = transform3),
-            liRef3.current.classList.add("hightlightIcon"))
+          ? ((navCircle.current.style.transform = transform3), liRef3.current.classList.add("hightlightIcon"))
           : liRef3.current.classList.remove("hightlightIcon");
         entry.target.classList[0] === "section4"
-          ? ((navCircle.current.style.transform = transform4),
-            liRef4.current.classList.add("hightlightIcon"))
+          ? ((navCircle.current.style.transform = transform4), liRef4.current.classList.add("hightlightIcon"))
           : liRef4.current.classList.remove("hightlightIcon");
         entry.target.classList[0] === "section5"
-          ? ((navCircle.current.style.transform = transform5),
-            liRef5.current.classList.add("hightlightIcon"))
+          ? ((navCircle.current.style.transform = transform5), liRef5.current.classList.add("hightlightIcon"))
           : liRef5.current.classList.remove("hightlightIcon");
       }
     });
   },
   appearOptions);
 
-  const appearOnScroll = new IntersectionObserver(function (
-    entries,
-    appearOnScroll
-  ) {
+  const appearOnScroll = new IntersectionObserver(function ( entries, appearOnScroll ) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) {
         entry.target.classList.remove("appear");
@@ -137,7 +126,7 @@ export default function home() {
       navFunction.observe(slider);
     });
   }, []);
-  //
+  
   return (
     <div className="h-screen  flex text-[clamp(12px,1.5vw,15px)] text-[#efefef] font-poppins bg-background1">
       <div
@@ -151,13 +140,15 @@ export default function home() {
           className="section1 slideIn relative flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]"
           id="section1"
         >
-          <Fade top delay={400}>
+          <Slide triggerOnce direction="up" delay={400} distance="30px">
+          <Fade triggerOnce top delay={400}>
             <p className=" m-4 text-curse font-Zeyada text-pageName text-2xl">
               about
             </p>
           </Fade>
-          <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div>
-          <div className="blobs " role="presentation">
+          </Slide>
+          {/* <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div> */}
+          <div className="blobs" role="presentation">
             <div className="blob-rotate">
               <div className="blob-move">
                 <div className="blob"></div>
@@ -177,31 +168,43 @@ export default function home() {
 
           <div className="pr-14 sm:pr-0 md:p-16 pb-1  flex justify-center items-end  h-full">
             <div className="z-10">
+            <div className="big-text-div">
+            <Slide triggerOnce direction="up" delay={400} distance="30px">
               <Fade bottom delay={400}>
-                <p className="text-4xl pr-5 inline-block sm:text-8xl font-black font-Montserrat pb-5">
+                <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Montserrat pb-5">
                   Me,{" "}
                 </p>
               </Fade>
+            </Slide>
+            <Slide triggerOnce direction="up" delay={450} distance="30px">
               <Fade bottom delay={450}>
-                <p className="text-4xl pr-5 inline-block sm:text-8xl font-black font-Montserrat pb-5">
+                <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Montserrat pb-5">
                   Myself{" "}
                 </p>
               </Fade>
+            </Slide>
+            <Slide triggerOnce direction="up" delay={500} distance="30px">
               <Fade bottom delay={500}>
-                <p className="text-4xl pr-5 inline-block sm:text-8xl font-black font-Montserrat pb-5">
+                <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Montserrat pb-5">
                   & I
                 </p>
               </Fade>
-
-              <Fade bottom delay={500} distance="80px">
+            </Slide>
+            </div>
+            <Slide triggerOnce direction="up" delay={700} distance="30px">
+              <Fade bottom delay={700} distance="30px">
                 <h2 className="pb-5">
                   am <span className="">Anurag </span> and I'm a MERN Stack
                   Developer currently based in Gurugram.
                 </h2>
               </Fade>
-              <Fade bottom delay={500} distance="80px">
+            </Slide>
+            <Slide triggerOnce direction="up" delay={700} distance="30px">
+              <Fade bottom delay={700} distance="30px">
                 <p className="pb-5">Passionate about Web Development.</p>
               </Fade>
+            </Slide>
+            <Slide triggerOnce direction="up" delay={550} distance="200px">
               <Fade bottom delay={550} distance="80px">
                 <p className="text-highlight2   pb-5">
                   My interest falls more on playing with CSS and bringing out
@@ -213,23 +216,26 @@ export default function home() {
                   with positive people.
                 </p>
               </Fade>
+            </Slide>
+            <Slide triggerOnce direction="up" delay={800} distance="30px">
               <Fade bottom delay={800} distance="50px">
                 <div className="w-[min(98%,25rem)]  p-2 flex  items-center bg-background3 border border-1 border-background2 rounded-full ">
                   <img
                     className="w-16 h-16 square mr-2  object-cover rounded-full"
                     src={ProfileImg}
                     alt="pfp"
-                  />
+                    />
                   <p className="ml-auto">See Resume and Contacts</p>
 
                   <HashLink
                     className="w-14 h-14 ml-1 square flex items-center justify-center rounded-full text-white   hover:bg-background2"
                     to="/#section4"
-                  >
+                    >
                     <EastIcon />
                   </HashLink>
                 </div>
               </Fade>
+              </Slide>
             </div>
           </div>
         </section>
@@ -241,7 +247,7 @@ export default function home() {
           className="section2 slideIn flex flex-col justify-between mx-auto h-screen snap-start snap-always w-[min(1100px,95%)]"
           id="section2"
         >
-          <Fade top delay={400}>
+          <Fade delay={100}>
             <p className="m-4 font-Zeyada text-pageName text-2xl">
               skills & experience
             </p>
@@ -249,21 +255,28 @@ export default function home() {
 
           <div className="md:p-16 pr-14 sm:pr-0 pb-1  flex justify-center items-end relative h-full ">
             <div className="z-10 ">
-              <Fade bottom delay={200} distance="50px">
-                <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
+              <Fade delay={100} distance="50px">
+                <h1 className="text-4xl md:text-6xl font-black  pb-5 font-Montserrat">
                   I've
                 </h1>
               </Fade>
-              <Fade bottom delay={200} distance="50px">
-                <h2>got experience of 1 year of working professionally.</h2>
+              <Fade delay={200} distance="50px">
+                <h2>got experience of 2 years working professionally.</h2>
+              </Fade>
+              <Fade delay={200} distance="50px">
+                  <Link to="/experience-chart" className="experience-chart-link" style={{marginTop: "20px"}}>See Experience Chart
+                    <div className="w-8 h-8 p-2 flex items-center bg-background3 border border-1 border-background2 rounded-full ">
+                      <img style={{width: "22px", height: "22px"}} src={arrow} />
+                    </div> 
+                  </Link>
               </Fade>
               <br />
-              <Fade bottom delay={200} distance="50px">
+              {/* <Fade bottom delay={300} distance="50px">
                 <ul>
                   <li className="mb-3">
                     <div className="flex items-center gap-2">
                     <h2 className="font-bold inline-block text-highlight2 mb-1">
-                      Internship at Rootandleaves -{" "}
+                      Frontend dev at Rootandleaves -{" "}
                     </h2>
                     <p className="text-[12px]"> {`(May - Nov, 2023)`}</p>
                     </div>
@@ -293,8 +306,8 @@ export default function home() {
                     </p>
                   </li>
                 </ul>
-              </Fade>
-              {/* <Fade bottom delay={200} distance="50px">
+              </Fade> */}
+              <Fade bottom delay={200} distance="50px">
                 <p>
                   Ive created apps using
                   <span className="text-highlight">
@@ -320,11 +333,14 @@ export default function home() {
                   also familiar with{" "}
                   <span className="text-highlight"> git, mongoose.</span>
                 </p>
-              </Fade> */}
-              <Fade bottom delay={200} distance="50px">
+              </Fade>
+             
+          
+              <Fade delay={300} distance="50px">
                 <div className="mt-2 sm:mt-8 flex gap-3 sm:gap-8 flex-wrap">
                   {SkillIcons.map((icon, index) => (
-                    <div className="tooltip" key={index}>
+                    
+                    <div  className="tooltip" key={index}>
                       <img
                         className="w-7 h-7 sm:w-10 sm:h-10 hover:after:content['hello']"
                         src={Object.values(icon)}
@@ -333,8 +349,11 @@ export default function home() {
                       <span className="tooltiptext">{Object.keys(icon)}</span>
                     </div>
                   ))}
+                  
                 </div>
-              </Fade>
+                </Fade>
+            
+  
             </div>
             <div className="fadeIn absolute -left-40 -bottom-40  w-2/3 h-1/2 bg-[#928daa] rounded-full mix-blend-normal filter blur-[7rem]"></div>
           </div>
@@ -356,7 +375,7 @@ export default function home() {
           <div className="md:p-16 pr-14 sm:pr-0 pb-1 flex items-end relative h-full ">
             <div className="z-10 flex flex-col gap-2 sm:gap-5">
               <Fade bottom delay={200} distance="50px">
-                <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
+                <h1 className="text-4xl md:text-6xl font-black  pb-5 font-Montserrat">
                   Projects.
                 </h1>
               </Fade>
@@ -399,10 +418,10 @@ export default function home() {
             <div className="z-10 ">
               <Fade bottom delay={200} distance="50px">
                 <a
-                  href="https://drive.google.com/file/d/1fZg-8UvsoYKA8Jm5wBDp-gGzazl3NPjC/view?usp=sharing"
+                  href="https://docs.google.com/document/d/1fTVxsKuG0k6QfBpeEKuQegtWCArbyEaxPH9lTxcDpxk/edit?usp=sharing"
                   target="_blank"
                 >
-                  <h2 className="text-2xl font-semibold hover:text-highlight transition-all ease-in-out delay-50">
+                  <h2 className="text-2xl w-[100px] font-semibold hover:text-highlight transition-all ease-in-out delay-50">
                     Resume
                   </h2>
                 </a>
@@ -446,7 +465,7 @@ export default function home() {
 
               <form ref={form} onSubmit={sendEmail} className="contactForm">
                 <Fade bottom delay={200} distance="50px">
-                  <h1 className="text-4xl sm:text-8xl font-black  pb-5 font-Montserrat">
+                  <h1 className="text-4xl md:text-6xl  font-black  pb-5 font-Montserrat">
                     Contact me.
                   </h1>
                 </Fade>
@@ -546,40 +565,41 @@ export default function home() {
             className=" absolute border top-[-24px] border-1 border-highlight h-[52px] w-[52px]   rounded-full  transition-all ease-in-out delay-20  present block"
           ></div>
 
+      
           <HashLink to="/#section1" ref={liRef1} className="li1 li">
             <div>
               <InfoTwoToneIcon />
             </div>
           </HashLink>
 
-          <Fade bottom delay={800} distance="30px">
+    
             <HashLink to="/#section2" ref={liRef2} className="li2 li">
               <div>
                 <LightbulbTwoToneIcon />
               </div>
             </HashLink>
-          </Fade>
-          <Fade bottom delay={850} distance="30px">
+           
+        
             <HashLink to="/#section3" ref={liRef3} className="li3 li">
               <div>
                 <WorkHistoryTwoToneIcon />
               </div>
             </HashLink>
-          </Fade>
-          <Fade bottom delay={900} distance="30px">
+  
+     
             <HashLink to="/#section4" ref={liRef4} className="li4 li">
               <div>
                 <EmailTwoToneIcon />
               </div>
             </HashLink>
-          </Fade>
-          <Fade bottom delay={950} distance="30px">
+       
+      
             <HashLink to="#section5" ref={liRef5} className="li5 li">
               <div>
                 <BookTwoToneIcon />
               </div>
             </HashLink>
-          </Fade>
+          
         </ul>
       </div>
     </div>

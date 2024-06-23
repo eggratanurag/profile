@@ -1,10 +1,10 @@
 import React from "react";
 import Project from "../project";
-import bookshelf1 from "../images/bookshelf1.jpg";
-import bookshelf2 from "../images/bookshelf2.jpg";
-import bookshelf3 from "../images/bookshelf3.jpg";
-import bookshelf4 from "../images/bookshelf4.jpg";
-import bookshelf5 from "../images/bookshelf5.jpg";
+import bookshelf1 from "../images/bookshelf1.webp";
+import bookshelf2 from "../images/bookshelf2.webp";
+import bookshelf3 from "../images/bookshelf3.webp";
+import bookshelf4 from "../images/bookshelf4.webp";
+import bookshelf5 from "../images/bookshelf5.webp";
 import bookshelfQr from "../images/bookshelfQr.png";
 
 export default function bookshelf() {

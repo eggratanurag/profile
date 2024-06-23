@@ -1,12 +1,12 @@
 import React from "react";
 import Project from "../project";
-import pis1 from "../images/pis1.jpg";
-import pis2 from "../images/pis2.jpg";
-import pis3 from "../images/pis3.jpg";
-import pis4 from "../images/pis4.jpg";
-import pis5 from "../images/pis5.jpg";
+import pis1 from "../images/pis1.webp";
+import pis2 from "../images/pis2.webp";
+import pis3 from "../images/pis3.webp";
+// import pis4 from "../images/pis4.webp";
+import pis5 from "../images/pis5.webp";
 import pisQr from "../images/pisQr.png";
-
+import name from './../images/bookshelf1.webp';
 export default function pis() {
   const techIcons = [
     { "Javascript": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" },
@@ -22,7 +22,7 @@ export default function pis() {
     { "Node.js": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png" },
   ];
 
-const imageArray = [pis1, pis2, pis3, pis4, pis5]
+const imageArray = [pis1, pis2, pis3, pis5]
 
   return (
     <Project
