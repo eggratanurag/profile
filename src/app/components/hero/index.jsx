@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { HashLink } from "react-router-hash-link";
 import ProfileImg from "./../../../images/profileImg.jpeg";
 import { FaChevronRight } from "react-icons/fa6";
 import { Fade, Slide } from "react-awesome-reveal";
@@ -76,7 +75,8 @@ export default function Home() {
                             </p>
                         </Fade>
 
-                    {/* <HashLink href="#contactMe"> */}
+                    <a href="#contactMe">
+                    <Fade triggerOnce bottom delay={600} distance="50px">
                     <div className="btn p-2 flex items-center bg-background3 border border-1 border-background2 rounded-full ">
                         <Image
                             className="w-16 h-16 square mr-2  object-cover rounded-full"
@@ -86,7 +86,8 @@ export default function Home() {
                         <p className="ml-2">See Resume & Contacts</p>
                         <i><FaChevronRight /></i>
                     </div>
-                    {/* </HashLink> */}
+                    </Fade>
+                    </a>
 
                 </div>
             </div>
