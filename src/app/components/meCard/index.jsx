@@ -195,7 +195,7 @@ export default function WobbleCardDemo() {
 
         <WobbleCard containerClassName="lg:col-span-2 min-h-[300px] w-full flex justify-center items-center">
           <div className="flex spotify bg-black h-full">
-            <div className="bg-[linear-gradient(to_right,#0d1116_50%,#000000_100%)] h-full text-white w-[56%] p-5 overflow-y-auto max-h-[320px] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-lenis-prevent>
+            <div className="bg-[linear-gradient(to_right,#0d1116_10%,#000000_60%)] h-full text-white w-[56%] p-5 overflow-y-auto max-h-[320px] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden" data-lenis-prevent>
               {/* <h1 className="text-4xl font-bold mb-8">Liked Songs</h1> */}
               <ul className="rotator" ref={listRef}>
                 {loading ? (
