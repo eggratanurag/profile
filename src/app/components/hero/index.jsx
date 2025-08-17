@@ -94,9 +94,5 @@ const greetings = [
     "Hallo & Ich",            // German
     "Ciao & Io",              // Italian
     "Olá & Eu",               // Portuguese
-    "Привет & Я",             // Russian
-    "你好 & 我",                // Chinese (Mandarin)
-    "こんにちは & 私",            // Japanese
-    "नमस्ते & मैं"               // Hindi
   ];
   
