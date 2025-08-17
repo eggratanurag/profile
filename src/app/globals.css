@@ -1,0 +1,426 @@
+/* @import "tailwindcss"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Zeyada&display=swap');
+
+@import "tw-animate-css";
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 0.5);
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+:root {
+  --blob-size: 600px;
+  --blob-speed: 8s;
+  --blob-speed-scale: calc(0.75 * var(--blob-speed));
+  --blob-speed-move: calc(1 * var(--blob-speed));
+  --blob-speed-rotate: calc(2 * var(--blob-speed));
+  --blob-opacity: 0.5;
+  --blob-blur: 80px;
+  --blob-color-1: 	hsl(259, 77%, 81%);
+  --blob-color-2: hsl(260, 100%, 80%);
+  --blob-color-3: 	hsl(185, 44%, 78%);
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* Add this at the end of your globals.css */
+@import 'ol/ol.css';
+
+/* Map styles */
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.ol-control {
+  display: none;
+}
+
+.ol-zoom {
+  display: none;
+}
+
+/* Ensure map container has proper dimensions */
+.ol-viewport {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mainBlob {
+  display: none;
+}
+.blobs {
+  position: absolute;
+  top: 3rem;
+  filter: blur(var(--blob-blur));
+}
+
+.blobs * {
+  backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.blobs:after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 22rem;
+  height: 38rem;
+  background: hsla(0deg, 0%, 72%, 0.08);
+  backdrop-filter: blur(8rem) saturate(1.6);
+  border-radius: 1.5rem;
+  z-index: 2;
+}
+
+.blob {
+  width: var(--blob-size);
+  height: calc(0.25 * var(--blob-size));
+  background-color: var(--blob-color-1);
+  border-radius: 100%;
+  opacity: var(--blob-opacity);
+  mix-blend-mode: multiply;
+  animation: blob ease-in-out var(--blob-speed-scale) infinite;
+}
+
+.blobs > :nth-child(2) .blob {
+  background-color: var(--blob-color-2);
+  animation-delay: calc(-0.8 * var(--blob-speed-scale));
+}
+
+.blobs > :nth-child(3) .blob {
+  background-color: var(--blob-color-3);
+  animation-delay: calc(-0.2 * var(--blob-speed-scale));
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: scale(0.8, 2);
+  }
+  50% {
+    transform: scale(1.4, 0.8);
+  }
+}
+
+.blob-rotate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: blob-rotate linear var(--blob-speed-rotate) infinite alternate;
+}
+
+.blob-rotate:nth-child(2) {
+  animation-duration: calc(2 * var(--blob-speed-rotate));
+  animation-delay: calc(-1.5 * var(--blob-speed-rotate));
+}
+
+.blob-rotate:nth-child(3) {
+  animation-direction: alternate-reverse;
+  animation-duration: calc(0.8 * var(--blob-speed-rotate));
+  animation-delay: calc(-1 * var(--blob-speed-rotate));
+}
+
+@keyframes blob-rotate {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotateZ(-28deg);
+    transform-origin: 50% 100%;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotateZ(28deg);
+    transform-origin: 50% 0%;
+  }
+}
+
+.blob-move {
+  animation: blob-move ease-in-out var(--blob-speed-move) infinite;
+}
+
+.blobs > :nth-child(2) .blob-move {
+  animation-delay: calc(-0.8 * var(--blob-speed-move));
+}
+
+.blobs > :nth-child(3) .blob-move {
+  animation-delay: calc(-0.4 * var(--blob-speed-move));
+}
+
+@keyframes blob-move {
+  0%, 100% {
+    transform: translateX(30%);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+}
+
+/* Support Layer Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* ============================ navigation circle animation ============================ */
+
+.block {
+	position: relative;
+	width: 52px;
+	height: 52px;
+  border-radius: 50%;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+  border-radius: 50%;
+	background: linear-gradient(45deg, #c1a9f4  , #addbdf  , #917fb3  );
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(30px);
+}
+
+@media (max-width: 800px) {
+  .blobs {
+   display: none;
+  }
+  .mainBlob {
+    display: block;
+  }
+
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} */
+
+
+
+.btn {
+  cursor: pointer;
+  width: fit-content;
+  padding: 16px 20px;
+  position: relative;
+  -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn i {
+  position: absolute;
+  font-size: 20px;
+  top: 42%;
+  right: 10%;
+  display: none;
+}
+
+.btn:hover {
+  background-color: rgb(241, 241, 241, 0.1);
+  border-color: #e1e1e140;
+  color: #fff;
+  padding-right: 100px;
+  margin-right: -26px;
+}
+
+.btn:hover i {
+  display: block;
+}
+
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+.inputStyle::after {
+  content: " ";
+  background: #171d25;
+  border-radius: 5px;
+  width: 100%;
+  height: 2px;
+  display: block;
+}
+
+.inputStyle:has(:focus)::after {
+  animation-name: strike;
+  background: #d1cde5;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+}
+

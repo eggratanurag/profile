@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&family=Staatliches&display=swap');
+
+/* Thanks to JHEY // @jh3yy - Adapted for React component */
+.spotify {
+  overflow: visible !important;
+}
+
+.spotify .bg-black {
+  scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.spotify li {
+  /* IMPORTANT FOR THE SNAPPING */
+  scroll-snap-align: center;
+  padding-left: 0.2em;
+  /* Removed CSS Custom Properties for dynamic values */
+  /* Removed Apply the custom properties */
+  opacity: 0.6; /* Default opacity for non-hovered items */
+  transform: scale(0.9); /* Default scale for non-hovered items */
+  /* Smooth transitions for hover effects */
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out, color 0.2s ease-out;
+  transform-origin: left center; /* Scales from the left */
+}
+
+.spotify li:hover {
+  opacity: 1; /* Full opacity on hover */
+  transform: scale(1.05); /* Slightly larger scale on hover */
+  color: white; /* Whiter color on hover */
+}
+
+.spotify li > span {
+  display: inline-block;
+}
+
+.spotify .cols2 {
+  padding-left: 20px;
+  display: flex;
+  /* outline:1px solid green; */
+}
+
+.spotify h1, .spotify ul, .spotify li {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  font-size: clamp(30px, 8vw, 60px);
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+.spotify h1 {
+  /* background:#c6e6ff; */
+  flex-grow: 0;
+  align-self: flex-start;
+}
+
+.spotify ul {
+  list-style-type: none;
+  padding-left: 0;
+  /* outline: 1px solid blue; */
+}
+
+.spotify ul, .spotify h1, .spotify li {
+  margin: 0;
+  line-height: 1;
+}
+
+/* Hide scrollbar */
+.spotify .bg-black::-webkit-scrollbar {
+  display: none;
+}
+
+.spotify .bg-black {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Spotify Logo Animation Video Styles */
+:root {
+  --spotify-green: #1ED760;
+}
+
+.spotify-logo-container {
+  /* Tailwind's absolute bottom-5 right-5 already handles positioning */
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--spotify-green); /* Background for the circle */
+  border-radius: 50%; /* Makes the container circular */
+  overflow: hidden; /* Hides parts of the video outside the circle */
+}
+
+.spotify-logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video fills the container */
+  /* The video itself is the animation, so no need for dash/scale-to-full animations here */
+}
