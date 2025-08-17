@@ -2,6 +2,7 @@ import Image from "next/image";
 import ProfileImg from "./../../../images/profileImg.jpeg";
 import { FaChevronRight } from "react-icons/fa6";
 import { Fade, Slide } from "react-awesome-reveal";
+import { FlipWords } from './../../../components/ui/flip-words.jsx';
 
 
 export default function Home() {
@@ -33,22 +34,13 @@ export default function Home() {
             <div className=" text-white pt-[100px] sm:pt-0 pb-1 flex justify-center items-end ">
                 <div >
                     <div className="big-text-div flex">
-                        {/* <Slide triggerOnce direction="up" delay={200} distance="30px"> */}
                             <Fade triggerOnce bottom delay={200}>
-                                <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Poppins pb-5">
+                                {/* <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Poppins pb-5">
                                     Hello{" "}
-                                </p>
+                                </p> */}
+                                <FlipWords className="text-4xl pr-5 text-white inline-block md:text-6xl font-black font-Poppins pb-5" words={greetings} /> 
                             </Fade>
-                        {/* </Slide> */}
-                        {/* <Slide triggerOnce direction="up" delay={200} distance="30px"> */}
-                            <Fade triggerOnce bottom delay={250}>
-                                <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Poppins pb-5">
-                                    & I
-                                </p>
-                            </Fade>
-                        {/* </Slide> */}
                     </div>
-                    {/* <Slide triggerOnce direction="up" delay={200} distance="200px"> */}
                         <Fade triggerOnce bottom delay={200} distance="50px">
                             <h2 className="pb-5">
                                 am Anurag — a Frontend Engineer passionate about crafting sleek, high-performance web
@@ -57,7 +49,6 @@ export default function Home() {
                                 that balance clean design with robust functionality.
                             </h2>
                         </Fade>
-                    {/* </Slide> */}
                         <Fade triggerOnce bottom delay={300} distance="50px">
                             <p className="text-highlight2   pb-5">
                                 I thrive on turning complex ideas into intuitive user interfaces, often experimenting
@@ -94,3 +85,18 @@ export default function Home() {
         </section>
     );
 }
+
+
+const greetings = [
+    "Hello & I",              // English
+    "Hola & Yo",              // Spanish
+    "Bonjour & Moi",          // French
+    "Hallo & Ich",            // German
+    "Ciao & Io",              // Italian
+    "Olá & Eu",               // Portuguese
+    "Привет & Я",             // Russian
+    "你好 & 我",                // Chinese (Mandarin)
+    "こんにちは & 私",            // Japanese
+    "नमस्ते & मैं"               // Hindi
+  ];
+  
