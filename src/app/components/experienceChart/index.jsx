@@ -175,17 +175,17 @@ export default function Project() {
             <div className={cn("card min-h-[200px]", isExpanded && "min-h-[550px] md:min-h-[500px]")} ></div>
             <div className="cardContent">
               <div className="flex justify-between items-start" >
-              <h1 className="text-lg" >Influcent Technologies</h1>
+              <p className="text-lg" >Influcent Technologies</p>
               <div className="dateInfo">
-                <h1 className='content'>Frontend developer</h1>
-                <h3 className='content'>May 2025 - Current</h3>
+                <p className='content'>Frontend developer</p>
+                <p className='content'>May 2025 - Current</p>
               </div>
               </div>
               <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px" }}>
                 {isExpanded && <section className="max-w-3xl  text-white">
-                  <h3 className="text-lg font-semibold ">
+                  <p className="text-lg font-semibold ">
                     My Role & Achievements
-                  </h3>
+                  </p>
 
                   <ul className="mt-3 text-inherit w-full list-disc space-y-2 pl-6 content2">
                     <li>Built a service dashboard for creators to launch and manage consultations, webinars, courses, and lead widgets.</li>
@@ -196,9 +196,9 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <h1 className='content mt-2' >Influcent is a creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</h1>}
+                {isExpanded && <p className='content mt-2' >Influcent is a creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</h1>}
                 <div >
-                  <h1 className='content2'>Projects I've worked on</h1>
+                  <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] mt-[20px] flex-wrap">
                     <Link href="https://influcent.com" target="_blank" ><button className=" rounded-full min-h-[35px] px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">influcent.com</button></Link>
                     <Link href="https://dashboard.influcent.com" target="_blank"  ><button className="rounded-full min-h-[35px] px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">dashboard.influcent.com</button></Link>
@@ -241,15 +241,15 @@ export default function Project() {
               <div className="flex justify-between items-start">
               <div className="text-lg">Ottermap</div>
               <div className="dateInfo">
-                <h1 className='content'>Frontend developer</h1>
-                <h3 className='content'>May 2024 - May 2025</h3>
+                <p className='content'>Frontend developer</p>
+                <p className='content'>May 2024 - May 2025</p>
               </div>
               </div>
               <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px" }}>
                 {isExpanded && <section className="max-w-3xl  text-white">
-                  <h3 className="text-lg font-semibold ">
+                  <p className="text-lg font-semibold ">
                     My Role & Achievements
-                  </h3>
+                  </p>
 
                   <ul className="mt-3 text-inherit w-full list-disc space-y-2 pl-6 content2">
                     <li>Integrated <strong>micro-frontend architecture</strong> with module federation to unify legacy and modern packages.</li>
@@ -261,9 +261,9 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <h1 className='content mt-2' >Ottermap is an automated property measurement platform for industries like landscaping, snow removal, and facilities maintenance, enabling users to generate precise property maps without manual measurement.</h1>}
+                {isExpanded && <p className='content mt-2' >Ottermap is an automated property measurement platform for industries like landscaping, snow removal, and facilities maintenance, enabling users to generate precise property maps without manual measurement.</h3>}
                 <div>
-                  <h1 className='content2'>Projects I've worked on</h1>
+                  <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
                     <h4 style={{ marginTop: "20px" }}><a href="https://ottermap.com" target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">ottermap.com</a></h4>
                     <h4 style={{ marginTop: "20px" }}><a href="https://uspeak.in" target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">uspeak.in</a></h4>
@@ -301,17 +301,17 @@ export default function Project() {
             <div  className={cn("card min-h-[200px]", isExpanded && "min-h-[600px] md:min-h-[500px]")} ></div>
             <div className="cardContent">
             <div className="flex justify-between items-start">
-              <h1  className="text-lg">Rootandleaves</h1>
+              <p  className="text-lg">Rootandleaves</p>
               <div className="dateInfo">
-                <h1 className='content'>Frontend developer</h1>
-                <h3 className='content'>May 2023 - May 2024</h3>
+                <p className='content'>Frontend developer</p>
+                <p className='content'>May 2023 - May 2024</p>
               </div>
               </div>
               <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px" }}>
                 {isExpanded && <section className="max-w-3xl  text-white">
-                  <h3 className="text-lg font-semibold ">
+                  <p className="text-lg font-semibold ">
                     My Role & Achievements
-                  </h3>
+                  </p>
 
                   <ul className="mt-3 text-inherit w-full list-disc space-y-2 pl-6 content2">
                     <li>Optimized large-scale applications with code-splitting and lazy loading for faster load times.</li>
@@ -323,9 +323,9 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <h1 className='content mt-2' >Rootandleaves in Gurugram, India delivers custom software, mobile apps, web development, and AI solutions, focusing on innovative and efficient technology to meet diverse client needs.</h1>}
+                {isExpanded && <p className='content mt-2' >Rootandleaves in Gurugram, India delivers custom software, mobile apps, web development, and AI solutions, focusing on innovative and efficient technology to meet diverse client needs.</h1>}
                 <div>
-                  <h1 className='content2'>Projects I've worked on</h1>
+                  <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
                     <h4 style={{ marginTop: "20px" }}><a href="https://mx360.io" target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">mx360.io</a></h4>
                     <h4 style={{ marginTop: "20px" }}><a href="https://jusplaytoys.com" target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">jusplaytoys.com</a></h4>
@@ -363,17 +363,17 @@ export default function Project() {
             <div className={cn("card min-h-[200px]", isExpanded && "min-h-[400px]")} ></div>
             <div className="cardContent">
             <div className="flex justify-between items-start">
-              <h1 className="text-lg">Freelancing</h1>
+              <p className="text-lg">Freelancing</p>
               <div className="dateInfo">
-                <h1 className='content'>Mern-stack Developer </h1>
-                <h3 className='content'>Aug 2022 - Apr 2023</h3>
+                <p className='content'>Mern-stack Developer </p>
+                <p className='content'>Aug 2022 - Apr 2023</p>
               </div>
               </div>
               <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px" }}>
-                {isExpanded && <h1 className='content2'> Excelled in Full-stack development and worked on multiple projects</h1>}
-                {isExpanded && <h1 className='content' > Executed a freelance MERN stack project for a school, delivering a comprehensive portfolio website with multiple pages and an intuitive admin dashboard for seamless content management.</h1>}
+                {isExpanded && <p className='content2'> Excelled in Full-stack development and worked on multiple projects</h1>}
+                {isExpanded && <p className='content' > Executed a freelance MERN stack project for a school, delivering a comprehensive portfolio website with multiple pages and an intuitive admin dashboard for seamless content management.</h1>}
                 <div>
-                  <h1 className='content2'>Projects I've worked on</h1>
+                  <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
                     <h4 style={{ marginTop: "20px" }}><a href="https://mediotix.com" target="_blank" className="rounded-full p-2 px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">mediotix.com</a></h4>
                   </div>
