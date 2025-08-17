@@ -1,11 +1,6 @@
 "use client"
 import { useState } from "react";
-import { IoCalendarClearOutline } from "react-icons/io5";
-import { CiFileOn } from "react-icons/ci";
 import Image from "next/image.js";
-import { CiBellOn } from "react-icons/ci";
-import { IoShareSocialOutline } from "react-icons/io5";
-import { DotPattern } from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, qubo } from './../../../images/clients/export.js';

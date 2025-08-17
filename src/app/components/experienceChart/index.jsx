@@ -9,10 +9,7 @@ import LightbulbTwoToneIcon from "@mui/icons-material/LightbulbTwoTone";
 import HourglassFullTwoToneIcon from '@mui/icons-material/HourglassFullTwoTone';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 import CalendarTodayTwoToneIcon from '@mui/icons-material/CalendarTodayTwoTone';
-import { Diversity2 } from "@mui/icons-material";
-import { DotPattern } from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
-import { Toggle } from "@/components/ui/toggle"
 import { BsChevronExpand } from "react-icons/bs";
 import { BiCollapseVertical } from "react-icons/bi";
 
@@ -131,16 +128,7 @@ export default function Project() {
 
       <div className={cn("flex flex-col py-2 md:py-12 xl:py-16 temprature", !isExpanded && "gap-2" )} >
 
-        {/* <DotPattern
-        width={20}
-        height={2}
-        cx={1}
-        cy={1}
-        cr={1}
-        className={cn(
-          "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ",
-        )}
-      /> */}
+  
         {/* navigation */}
         <div className='projectName flex flex-row gap-5 items-center p-3'>
 
@@ -169,16 +157,16 @@ export default function Project() {
               <AccessTimeTwoToneIcon />
             </div>
           </div>
-          <Slide triggerOnce direction="up" delay={10} distance="5px">
-            <Fade triggerOnce bottom delay={500}>
+            <Fade  triggerOnce bottom delay={200}>
+              <div className="flex flex-col">
               <p className="text-3xl pr-5 inline-block md:text-4xl font-black font-Montserrat ">
                 Currently
               </p>
               <p className="text-1xl inline-block font-normal font-Montserrat">
                 I am working in a startup (SAAS) based in Gurugram
               </p>
+              </div>
             </Fade>
-          </Slide>
         </div>}
 
         <Tilt {...tiltProps} style={{ overflow: "hidden" }}>
@@ -231,16 +219,16 @@ export default function Project() {
               <LightbulbTwoToneIcon />
             </div>
           </div>
-          <Slide triggerOnce direction="up" delay={10} distance="5px">
-            <Fade triggerOnce bottom delay={500}>
+            <Fade triggerOnce bottom delay={200}>
+            <div className="flex flex-col">
               <p className="text-3xl pr-5 inline-block md:text-4xl font-black font-Montserrat ">
                 Previously
               </p>
               <p className="text-1xl inline-block font-normal font-Montserrat">
                 I was working in a startup (SAAS) based in Gurugram
               </p>
+              </div>
             </Fade>
-          </Slide>
         </div>}
 
         {/* second cardContent */}
@@ -294,16 +282,16 @@ export default function Project() {
               <HourglassFullTwoToneIcon />
             </div>
           </div>
-          <Slide triggerOnce direction="up" delay={10} distance="5px">
-            <Fade triggerOnce bottom delay={500}>
+            <Fade triggerOnce bottom delay={200}>
+            <div className="flex flex-col">
               <p className="text-3xl pr-5 inline-block md:text-4xl font-black font-Montserrat ">
                 Before this
               </p>
               <p className="text-1xl inline-block font-normal font-Montserrat">
                 I was working in an IT service provider startup based in Gurugram.
               </p>
+              </div>
             </Fade>
-          </Slide>
         </div>}
 
         {/* third cardContent */}
@@ -356,16 +344,16 @@ export default function Project() {
               <CalendarTodayTwoToneIcon />
             </div>
           </div>
-          <Slide triggerOnce direction="up" delay={10} distance="5px">
-            <Fade triggerOnce bottom delay={500}>
+            <Fade triggerOnce bottom delay={200}>
+            <div className="flex flex-col">
               <p className="text-3xl pr-5 inline-block md:text-4xl font-black font-Montserrat ">
                 Before that
               </p>
               <p className="text-1xl inline-block font-normal font-Montserrat">
                 I was working as a Freelance Full-stack (MERN) developer.
               </p>
+              </div>
             </Fade>
-          </Slide>
         </div>}
 
         {/* fourth cardContent */}

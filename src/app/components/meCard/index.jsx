@@ -10,19 +10,11 @@ import { Badge } from "@/components/ui/badge"
 import disolvedMan from './../../../images/disolvedMan.png';
 import './index.css';
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DotPattern } from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
 import spotifyIcon from './../../../images/3d-casual-life-spotify.webp';
 import { Facebook, Link2, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ShareButton from './../../../components/ui/share-button.jsx';
-
-
-// Register ScrollTrigger plugin
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 const shareLinks = [
   {
@@ -174,11 +166,11 @@ export default function WobbleCardDemo() {
         </ShareButton>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4  mx-auto w-full">
-        <DotPattern
+        {/* <DotPattern
           className={cn(
             "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)]",
           )}
-        />
+        /> */}
         <WobbleCard containerClassName=" lg:col-span-1 min-h-[300px] flex justify-center  items-center">
           <section className="h-full flex flex-col justify-center items-center p-5 w-full relative text-white ">
 
@@ -237,14 +229,3 @@ export default function WobbleCardDemo() {
   );
 }
 
-
-// https://open.spotify.com/user/4h41ookhtw4mvek8zrplx1jb1
-
-
-// https://accounts.spotify.com/authorize?client_id=25d2dac10a894485837b2d94b8a9948d&response_type=code&redirect_uri=https://0e5b4f7e14c8.ngrok-free.app/api/callback&scope=user-library-read%20playlist-read-private%20user-follow-read
-
-
-// https://7bf7e9abdf97.ngrok-free.app/?code=AQD7QmkMNtDv8LnVUxhbry2ryYcvBMR3PdMQOuq3KA_hzTnNZrQ3_NQ6IzKT1UZRxLJBp8-uQwAlHqxiTgYrw3IsOl5c9vypelBJTvTuNRq8YRBUtA2ev14tpArwwXisdYvyJuLtCYfohsc_Ji74L3KH7ZD9nH3Ox9ZPAFqHSVNVPZTbsNLvgUVIodyQc67GcIh_pW9ftb7y8ml2BLNhgPbLWd3PtBAB14TGHIkQmZv6ByfHpS-_lNuj-fCzNhIxEoB9
-
-
-// https://accounts.spotify.com/authorize?client_id=25d2dac10a894485837b2d94b8a9948d&response_type=code&redirect_uri=https://0e5b4f7e14c8.ngrok-free.app/api/auth/callback/spotify&scope=user-library-read

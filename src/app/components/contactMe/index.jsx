@@ -40,12 +40,12 @@ export default function ContactMe() {
 
     return (
         <section id="contactMe" className="section4 text-white relative flex-col justify-between  ">
-            <Fade top delay={400}>
+            <Fade triggerOnce top delay={200}>
                 <p className="m-4 font-Zeyada text-2xl text-pageName">contact</p>
             </Fade>
             <div className="md:py-16 md:px-8  sm:pr-0 pb-10  flex justify-center items-end h-full ">
                 <div className="z-10 ">
-                    <Fade bottom delay={200} distance="50px">
+                    <Fade triggerOnce bottom delay={200} distance="50px">
                         <a
                             href="https://drive.google.com/file/d/1Z1kiMc59qJIOuwLNsLhgA_pF26GWOSxA/view?usp=sharing"
                             target="_blank"
@@ -56,7 +56,7 @@ export default function ContactMe() {
                         </a>
                     </Fade>
 
-                    <Fade bottom delay={200} distance="50px">
+                    {/* <Fade triggerOnce bottom delay={200} distance="50px">
                         <div className="h-12 flex items-center gap-4">
                             <a
                                 className="hover:text-highlight transition-all ease-in-out delay-50"
@@ -81,15 +81,15 @@ export default function ContactMe() {
                             </a>
                         
                         </div>
-                    </Fade>
+                    </Fade> */}
 
                     <form ref={form} onSubmit={sendEmail} className="contactForm">
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <h1 className="text-4xl md:text-6xl  font-black  pb-5 font-Montserrat">
                                 Contact me.
                             </h1>
                         </Fade>
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <p className="pb-5">
                                 Currently I’m Working as Full time and looking for some freelance
                                 opportunities especially ambitious or large projects.
@@ -97,7 +97,7 @@ export default function ContactMe() {
                                 hesitate to use the form.
                             </p>
                         </Fade>
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <div className="flex gap-5">
                                 <div className="inputStyle w-full">
                                     <input
@@ -119,7 +119,7 @@ export default function ContactMe() {
                                 </div>
                             </div>
                         </Fade>
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <div className="inputStyle w-full">
                                 <input
                                     className="p-5 w-full bg-transparent border-none outline-none"
@@ -129,7 +129,7 @@ export default function ContactMe() {
                                 />
                             </div>
                         </Fade>
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <div className="inputStyle w-full">
                                 <textarea
                                     className="p-5 w-full bg-transparent resize-none border-none outline-none"
@@ -141,7 +141,7 @@ export default function ContactMe() {
                                 />
                             </div>
                         </Fade>
-                        <Fade bottom delay={200} distance="50px">
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <button
                                 type="submit"
                                 value="send"

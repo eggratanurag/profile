@@ -34,23 +34,23 @@ export default function Home() {
             <div className=" text-white pt-[100px] sm:pt-0 pb-1 flex justify-center items-end ">
                 <div >
                     <div className="big-text-div flex">
-                        <Slide triggerOnce direction="up" delay={400} distance="30px">
-                            <Fade bottom delay={400}>
+                        {/* <Slide triggerOnce direction="up" delay={200} distance="30px"> */}
+                            <Fade triggerOnce bottom delay={200}>
                                 <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Poppins pb-5">
                                     Hello{" "}
                                 </p>
                             </Fade>
-                        </Slide>
-                        <Slide triggerOnce direction="up" delay={450} distance="30px">
-                            <Fade bottom delay={450}>
+                        {/* </Slide> */}
+                        {/* <Slide triggerOnce direction="up" delay={200} distance="30px"> */}
+                            <Fade triggerOnce bottom delay={250}>
                                 <p className="text-4xl pr-5 inline-block md:text-6xl font-black font-Poppins pb-5">
                                     & I
                                 </p>
                             </Fade>
-                        </Slide>
+                        {/* </Slide> */}
                     </div>
-                    <Slide triggerOnce direction="up" delay={550} distance="200px">
-                        <Fade bottom delay={550} distance="80px">
+                    {/* <Slide triggerOnce direction="up" delay={200} distance="200px"> */}
+                        <Fade triggerOnce bottom delay={200} distance="50px">
                             <h2 className="pb-5">
                                 am Anurag — a Frontend Engineer passionate about crafting sleek, high-performance web
                                 experiences. With 3+ years of experience in React.js, Next.js, and modern JavaScript,
@@ -58,9 +58,8 @@ export default function Home() {
                                 that balance clean design with robust functionality.
                             </h2>
                         </Fade>
-                    </Slide>
-                    <Slide triggerOnce direction="up" delay={800} distance="30px">
-                        <Fade bottom delay={800} distance="50px">
+                    {/* </Slide> */}
+                        <Fade triggerOnce bottom delay={300} distance="50px">
                             <p className="text-highlight2   pb-5">
                                 I thrive on turning complex ideas into intuitive user interfaces, often experimenting
                                 with CSS, animations, and design patterns to make products both beautiful and
@@ -69,16 +68,13 @@ export default function Home() {
                                 use.
                             </p>
                         </Fade>
-                    </Slide>
-                    <Slide triggerOnce direction="up" delay={800} distance="30px">
-                        <Fade bottom delay={800} distance="50px">
+                        <Fade triggerOnce bottom delay={400} distance="50px">
                             <p className="text-highlight2   pb-5">
                                 Beyond client work, I enjoy exploring emerging tools, building personal projects, and
                                 refining my craft through continuous learning. My goal is to create digital
                                 experiences that not only solve problems but also leave a lasting impression.
                             </p>
                         </Fade>
-                    </Slide>
 
                     {/* <HashLink href="#contactMe"> */}
                     <div className="btn p-2 flex items-center bg-background3 border border-1 border-background2 rounded-full ">
@@ -87,7 +83,7 @@ export default function Home() {
                             src={ProfileImg}
                             alt="pfp"
                         />
-                        <p className="ml-5">See Resume and Contacts</p>
+                        <p className="ml-2">See Resume & Contacts</p>
                         <i><FaChevronRight /></i>
                     </div>
                     {/* </HashLink> */}
