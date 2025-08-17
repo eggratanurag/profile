@@ -196,7 +196,7 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <p className='content mt-2' >Influcent is a creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</h1>}
+                {isExpanded && <p className='content mt-2' >Influcent is a creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</p>}
                 <div >
                   <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] mt-[20px] flex-wrap">
@@ -261,7 +261,7 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <p className='content mt-2' >Ottermap is an automated property measurement platform for industries like landscaping, snow removal, and facilities maintenance, enabling users to generate precise property maps without manual measurement.</h3>}
+                {isExpanded && <p className='content mt-2' >Ottermap is an automated property measurement platform for industries like landscaping, snow removal, and facilities maintenance, enabling users to generate precise property maps without manual measurement.</p>}
                 <div>
                   <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
@@ -323,7 +323,7 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <p className='content mt-2' >Rootandleaves in Gurugram, India delivers custom software, mobile apps, web development, and AI solutions, focusing on innovative and efficient technology to meet diverse client needs.</h1>}
+                {isExpanded && <p className='content mt-2' >Rootandleaves in Gurugram, India delivers custom software, mobile apps, web development, and AI solutions, focusing on innovative and efficient technology to meet diverse client needs.</p>}
                 <div>
                   <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
@@ -370,8 +370,8 @@ export default function Project() {
               </div>
               </div>
               <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "10px" }}>
-                {isExpanded && <p className='content2'> Excelled in Full-stack development and worked on multiple projects</h1>}
-                {isExpanded && <p className='content' > Executed a freelance MERN stack project for a school, delivering a comprehensive portfolio website with multiple pages and an intuitive admin dashboard for seamless content management.</h1>}
+                {isExpanded && <p className='content2'> Excelled in Full-stack development and worked on multiple projects</p>}
+                {isExpanded && <p className='content' > Executed a freelance MERN stack project for a school, delivering a comprehensive portfolio website with multiple pages and an intuitive admin dashboard for seamless content management.</p>}
                 <div>
                   <p className='content2'>Projects I've worked on</p>
                   <div className="flex flex-row gap-[10px] flex-wrap">
