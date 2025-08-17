@@ -1,0 +1,67 @@
+
+
+
+
+
+
+.dock-container {
+    position: absolute;
+    top: 10px;
+    right: 25%;
+    padding: 20px;
+    border-radius: 50px;
+  }
+  
+  .tabs-wrapper {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .tab {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  .tab .tooltip {
+    position: absolute;
+    bottom: -30px;
+    opacity: 0;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+  
+  .tab:hover .tooltip {
+    opacity: 1;
+  }
+  
+  .dockBlob {
+    position: absolute;
+    background: rgba(100, 200, 255, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    top: 0;
+    will-change: transform;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }

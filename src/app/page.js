@@ -8,12 +8,13 @@ import MeCard from "./components/meCard/index.jsx";
 import { FaChevronRight } from "react-icons/fa6";
 import {Fade, Slide} from "react-awesome-reveal";
 import HeroSection from './components/hero/index.jsx'
+import Dock from './components/dock/index.jsx'
 
 
 export default function Home() {
   return (
-    <div className="font-sans bg-background1   ">
-     
+    <div className="font-sans relative bg-background1">
+     {/* <Dock /> */}
      <HeroSection />
 
       <section className="">
