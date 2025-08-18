@@ -7,7 +7,7 @@ import { FlipWords } from './../../../components/ui/flip-words.jsx';
 
 export default function Home() {
     return (
-        <section className="relative flex flex-col  justify-between mx-auto min-h-screen pb-20  w-[min(1100px,95%)]">
+        <section id="hero" className="relative flex flex-col  justify-between mx-auto min-h-screen pb-20  w-[min(1100px,95%)]">
             <p className="m-4 font-Zeyada text-pageName text-2xl">about</p>
             <div className="fadeIn absolute bottom-32  w-2/3 h-1/2 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div>
             <div

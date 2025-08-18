@@ -67,7 +67,7 @@
   /* For Safari support */
   border: 2px solid #2b3137;
   background: #161b22d0;
-  z-index: 100;
+  z-index: 10;
 }
 
 .content {
