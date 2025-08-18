@@ -20,8 +20,8 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { CiFolderOn } from "react-icons/ci";
-import { MorphingText } from "@/components/magicui/morphing-text";
-
+import { LinkPreview } from "@/components/ui/link-preview";
+ 
 
 const Chart = dynamic(() => import('react-apexcharts'), {
     ssr: false,
@@ -103,44 +103,16 @@ const questions = [
     },
 ];
 
-const data = [
-    {
-        name: "Organic Traffic",
-        data: [
-            { x: 'Jan', y: 92 },
-            { x: 'Feb', y: 91 },
-            { x: 'Mar', y: 93 },
-            { x: 'Apr', y: 92 },
-            { x: 'May', y: 94 },
-            { x: 'Jun', y: 91 },
-            { x: 'Jul', y: 93 },
-            { x: 'Aug', y: 92 },
-            { x: 'Sep', y: 94 },
-            { x: 'Oct', y: 91 },
-            { x: 'Nov', y: 93 },
-            { x: 'Dec', y: 92 }
-        ],
-        color: "#c1a9f4",
-    },
-    {
-        name: "Conversion Rate",
-        data: [
-            { x: 'Jan', y: 88 },
-            { x: 'Feb', y: 87 },
-            { x: 'Mar', y: 89 },
-            { x: 'Apr', y: 88 },
-            { x: 'May', y: 90 },
-            { x: 'Jun', y: 87 },
-            { x: 'Jul', y: 89 },
-            { x: 'Aug', y: 88 },
-            { x: 'Sep', y: 91 },
-            { x: 'Oct', y: 87 },
-            { x: 'Nov', y: 89 },
-            { x: 'Dec', y: 88 }
-        ],
-        color: "#addbdf",
-    },
-];
+const data = [{
+    name: 'Organic Traffic',
+    data: [41, 40, 28, 51, 42, 109, 100],
+    color: "#c1a9f4"
+  }, {
+    name: 'Conversion Rate',
+    data: [11, 32, 45, 32, 34, 52, 41],
+    color: "#addbdf"
+  }]
+
 
 const lineChartDataOverallRevenue = {
     series: data,
@@ -160,7 +132,7 @@ const lineChartDataOverallRevenue = {
         },
         stroke: {
             curve: "smooth",
-            width: 3,
+            width: 2,
         },
         colors: ["#c1a9f4", "#addbdf"],
         fill: {
@@ -188,7 +160,8 @@ const lineChartDataOverallRevenue = {
             },
         },
         xaxis: {
-            categories: data[0].data.map(item => item.x),
+            type: 'datetime',
+            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"],
             labels: {
                 style: {
                     colors: "white",
@@ -198,6 +171,7 @@ const lineChartDataOverallRevenue = {
         },
         yaxis: {
             labels: {
+                show: false,
                 style: {
                     colors: "white",
                     fontSize: "12px",
