@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image.js";
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
@@ -7,29 +7,18 @@ import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, qubo } fro
 import { ExpandedTabs } from './../../../components/ui/expanded-tabs.jsx';
 import { CiGrid31 } from "react-icons/ci";
 import { CiCircleList } from "react-icons/ci";
-import { VscGithubAlt } from "react-icons/vsc";
-import { IoFolderOpenOutline } from "react-icons/io5";
 import { IoBriefcaseOutline } from "react-icons/io5";
-import { HiOutlineBriefcase } from "react-icons/hi2";
 import './index.css';
-import { FaChevronRight } from "react-icons/fa6";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 import { CiFolderOn } from "react-icons/ci";
 import { LinkPreview } from "@/components/ui/link-preview";
  
-
 const Chart = dynamic(() => import('react-apexcharts'), {
     ssr: false,
     loading: () => <div className="w-full h-full bg-gray-800 flex items-center justify-center text-white">Loading chart...</div>
 });
 
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-
 import dynamic from 'next/dynamic';
 
 // Dynamically import the map component to avoid SSR issues
@@ -112,7 +101,6 @@ const data = [{
     data: [11, 32, 45, 32, 34, 52, 41],
     color: "#addbdf"
   }]
-
 
 const lineChartDataOverallRevenue = {
     series: data,
@@ -452,7 +440,9 @@ export default function BentoDemo() {
             </BentoGrid>}
 
             {selected !== 0 && projects.filter(item => item.type.includes(selected)).map((item, index) =>
+              <React.Fragment key={index}>
                <AccordionComponent item={item} index={index} length={projects.filter(item => item.type.includes(selected)).length} />
+              </React.Fragment>
             )}
 
         </div>
@@ -461,9 +451,14 @@ export default function BentoDemo() {
 
 const AccordionComponent = ({item, index, length}) => {
     return (
-        <Accordion key={index} className={cn("accordionButton px-5 !py-0 font-Poppins text-white flex !w-full items-center bg-background3 border border-background2", index === 0 && "rounded-tr-2xl rounded-tl-2xl", index === length - 1 && "rounded-bl-2xl rounded-br-2xl")} type="single" collapsible>
+        <Accordion className={cn("accordionButton px-5 !py-0 font-Poppins text-white flex !w-full items-center bg-background3 border border-background2", index === 0 && "rounded-tr-2xl rounded-tl-2xl", index === length - 1 && "rounded-bl-2xl rounded-br-2xl")} type="single" collapsible>
             <AccordionItem className="w-full" value="item-1">
-                <AccordionTrigger className="!w-full"><a href={item.link} target="_blank">{item.name}</a></AccordionTrigger>
+                <AccordionTrigger className="!w-full">
+                    <LinkPreview url={item.link} >
+                       {item.name}
+                    </LinkPreview>
+                    {/* <a href={item.link} target="_blank">{item.name}</a> */}
+                </AccordionTrigger>
                 <AccordionContent className="font-light text-gray-400">
                     {item.description}
                     <div className="flex-wrap flex gap-2 items-center mt-3">
