@@ -1,0 +1,15 @@
+
+.accordionButton {
+    -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  
+  .accordionButton:hover {
+    background-color: rgb(241, 241, 241, 0.1);
+    border-color: #e1e1e140;
+    color: #fff;
+  }
+  

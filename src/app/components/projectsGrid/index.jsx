@@ -7,6 +7,20 @@ import { cashKaro, diceAcademy, finolex, gsk, maxHealth, pvr, watcho, qubo } fro
 import { ExpandedTabs } from './../../../components/ui/expanded-tabs.jsx';
 import { CiGrid31 } from "react-icons/ci";
 import { CiCircleList } from "react-icons/ci";
+import { VscGithubAlt } from "react-icons/vsc";
+import { IoFolderOpenOutline } from "react-icons/io5";
+import { IoBriefcaseOutline } from "react-icons/io5";
+import { HiOutlineBriefcase } from "react-icons/hi2";
+import './index.css';
+import { FaChevronRight } from "react-icons/fa6";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+import { CiFolderOn } from "react-icons/ci";
+import { MorphingText } from "@/components/magicui/morphing-text";
 
 
 const Chart = dynamic(() => import('react-apexcharts'), {
@@ -73,7 +87,6 @@ const files = [
         badgeTextClass: "text-white",
     },
 ];
-
 
 const questions = [
     {
@@ -209,11 +222,10 @@ const lineChartDataOverallRevenue = {
 
 const features = [
     {
-
         name: "Influcent",
         description: "Empowering Creators to Turn Passion Into Profit",
-        href: "#",
-        cta: "Learn more",
+        href: "https://influcent.com",
+        cta: "View project",
         className: "col-span-3 lg:col-span-1",
         background: (
             <div className="bg-none w-full text-white absolute right-0 top-2 origin-top scale-95 rounded-[10px]  transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90 ">
@@ -228,9 +240,6 @@ const features = [
                     </p>
                 </div>
                 <div className="p-4 bg-none w-full ">
-
-
-
                     <div className="w-full" >
                         <div className="flex flex-col gap-2 ">
                             {questions[0].options.map((option, idx) => (
@@ -252,20 +261,16 @@ const features = [
                             ➡
                         </button>
                     </div>
-
-
-
                 </div>
             </div>
-
         ),
     },
     {
 
         name: "MX360",
         description: "A React-based reporting dashboard leveraging React-Charts, custom calendar UIs, and funnel visualizations for analytics insights.",
-        href: "#",
-        cta: "Learn more",
+        href: "https://mx360.io",
+        cta: "View project",
         className: "col-span-3 lg:col-span-2",
         background: (
             <div style={{ width: "100%", height: "100%" }} className="bg-none w-full text-white absolute right-0 top-2 origin-top scale-55 rounded-[10px]  transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_30%,#000_100%)] group-hover:scale-90" id="chart15">
@@ -283,22 +288,21 @@ const features = [
     {
         name: "Ottermap",
         description: "A property mapping and takeoff tool built using Google Maps and OpenLayers for landscaping and site planning",
-        href: "#",
-        cta: "Learn more",
+        href: "https://ottermap.com",
+        cta: "View project",
         className: "col-span-3 lg:col-span-2",
         background: (
             <div className="bg-none w-full text-white absolute right-0  origin-bottom scale-55 rounded-[10px]  transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90" >
                 <MapComponent />
             </div>
-
         ),
     },
     {
         name: "Mediotix",
         description: "SEO-optimized. SSR-powered. AI-driven MarTech.",
         className: "col-span-3 lg:col-span-1",
-        href: "#",
-        cta: "Learn more",
+        href: "https://mediotix.com",
+        cta: "View project",
         background: (
             // marquee
             <Marquee
@@ -342,6 +346,105 @@ const features = [
     },
 ];
 
+const tabsList = [
+    { title: "Grid", icon: CiGrid31, key: 0, headings: "Projects" },
+    { title: "All", icon: CiCircleList, key: 1, headings: "All Projects"  },
+    { title: "Personal", icon: CiFolderOn, key: 2, headings: "Personal"  },
+    { title: "Freelance", icon: IoBriefcaseOutline, key: 3, headings: "Freelance"  },
+    // { title: "OpenSrc", icon: VscGithubAlt, key: 2, headings: "Open Src"  },
+]
+
+const projects = [
+    {
+        name: "AI Chatbot Widget",
+        link: "https://nitikabhola.com", // no public link mentioned
+        description: "Built a lightweight, embeddable chatbot widget usable across all major frameworks. Designed a floating UI with Tailwind CSS and enabled 1-line script integration.",
+        tech: ["Tailwind CSS", "Vanilla JS", "ChatGPT API", "React.js"],
+        duration: "Jul 2025 – Present",
+        type: [0, 1, 2],
+    },
+    {
+        name: "OtterTask",
+        link: null,
+        description: "Developed a mobile CRM for task tracking with geo-tagging and annotations. Enabled image uploads, geofencing, and submission reviews.",
+        tech: ["React Native", "Google Maps API"],
+        duration: "Nov 2024 – Feb 2025",
+        type: [0, 1],
+    },
+    {
+        name: "MX360",
+        link: "https://mx360.io",
+        description: "Created a campaign analytics dashboard with dynamic filters and custom charts. Integrated APIs for Google, Meta, YouTube, and SEO tracking.",
+        tech: ["ReactJS", "Chakra UI", "GraphQL", "Chart.js", "Ads APIs"],
+        duration: "Jan 2024 – Jan 2025",
+        type: [0, 1],
+    },
+    {
+        name: "JusplayToys",
+        link: "https://www.jusplaytoys.com/",
+        description: "Contributed UI for a toy-renting e-commerce platform with subscriptions. Improved browsing and checkout flows using reusable components.",
+        tech: ["Next.js", "Sanity", "Styled Components", "Context API"],
+        duration: "Jun 2023 – Dec 2023",
+        type: [0, 1],
+    },
+    {
+        name: "Influcent Dashboard",
+        link: "https://demo.influcent.com/",
+        description: "Built a service dashboard enabling creators to manage branded websites. Developed tools for courses, consultations, QA, lead capture, and AI bots.",
+        tech: ["Next.js", "ReactJS", "Chakra UI", "Redux", "Chart.js"],
+        duration: "Nov 2024 – Present",
+        type: [0, 1],
+    },
+    {
+        name: "Mediotix",
+        link: "https://mediotix.com",
+        description: "Built an SSR marketing website with custom CMS integration. Focused on SEO, animations, and responsive performance.",
+        tech: ["Next.js", "Chakra UI", "SSR"],
+        duration: "Aug 2024 – Feb 2025",
+        type: [0, 1, 3],
+    },
+    {
+        name: "Ottermap",
+        link: "https://ottermap.com",
+        description: "Contributed several features to a map-based measurement tools for landscape planning. Implemented satellite rendering and drawing tools.",
+        tech: ["ReactJS", "Google Maps API", "OpenLayers", "Material UI", "Rest APIs"],
+        duration: "May 2024 – May 2025",
+        type: [0, 1],
+    },
+    {
+        name: "Uspeak.in",
+        link: "https://uspeak.in",
+        description: "Built a video consultation platform for mental health professionals. Integrated Agora (video), Twilio (SMS), and therapist dashboards.",
+        tech: ["ReactJS", "Supabase", "Agora", "Twilio", "Chakra UI"],
+        duration: "Feb 2025 – May 2025",
+        type: [0, 1],
+    },
+    {
+        name: "Influcent.com",
+        link: "https://www.influcent.com/",
+        description: "Built the official website for Influcent, a B2B SaaS creator platform.",
+        tech: ["Next.js", "Chakra UI", "GraphQL APIs"],
+        duration: "Aug 2024 – Present",
+        type: [0, 1, 3],
+    },
+    {
+        name: "Prestige School",
+        link: "https://the-prestige-international-school-bhind.onrender.com/",
+        description: "Build a School website connected to a dashboard for content management. It's a complete MERN Stack project.",
+        tech: ["React.js", "TailwindCSS", "Shadcn UI", "Express.js", "Node.js", "JWT", "MongoDB"],
+        duration: "Sept 2022 – Jan 2023",
+        type: [0, 1, 3],
+    },
+    {
+        name: "Todo List",
+        link: "https://todolist-brre.onrender.com/",
+        description: "Build a todolist with Google Login, custom animations for crud operations. Users can create lists and tasks.",
+        tech: ["React.js", "CSS", "Express.js", "Node.js", "Google Login", "MongoDB"],
+        duration: "Aug 2022 – Sept 2022",
+        type: [0, 1, 2]
+    }
+];
+
 export default function BentoDemo() {
     const [selected, setSelected] = useState(0)
 
@@ -354,24 +457,49 @@ export default function BentoDemo() {
                 )}
             /> */}
             {/* <div className="fadeIn absolute top-2 right-0  w-7 h-4 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div> */}
-            <div className=" flex mx-auto items-end justify-between mb-5  w-full ">
-                <p className="text-4xl  text-white inline-block md:text-5xl font-black font-Poppins ">
-                    Projects
+            <div className=" flex flex-col sm:flex-row gap-5 sm:gap-0 mx-auto items-start sm:items-end justify-between mb-5 w-full">
+                <p className="text-4xl text-white inline-block md:text-5xl font-black font-Poppins">
+                   {tabsList[selected].headings} 
                 </p>
                 <div className="light">
-                  <ExpandedTabs
-                    setSelected={setSelected}
-                    selected={selected}
-                    activeColor="#F1F1F11A"
-                    tabs={[{ title: "Grid", icon: CiGrid31 }, { title: "List", icon: CiCircleList },]} />
+                    <ExpandedTabs
+                        setSelected={setSelected}
+                        selected={selected}
+                        activeColor="#F1F1F11A"
+                        tabs={tabsList} 
+                    />
                 </div>
             </div>
-            <BentoGrid>
+
+            {selected === 0 && <BentoGrid>
                 {features.map((feature, idx) => (
                     <BentoCard key={idx} {...feature} />
                 ))}
-            </BentoGrid>
+            </BentoGrid>}
+
+            {selected !== 0 && projects.filter(item => item.type.includes(selected)).map((item, index) =>
+               <AccordionComponent item={item} index={index} length={projects.filter(item => item.type.includes(selected)).length} />
+            )}
+
         </div>
     );
+}
+
+const AccordionComponent = ({item, index, length}) => {
+    return (
+        <Accordion key={index} className={cn("accordionButton px-5 !py-0 font-Poppins text-white flex !w-full items-center bg-background3 border border-background2", index === 0 && "rounded-tr-2xl rounded-tl-2xl", index === length - 1 && "rounded-bl-2xl rounded-br-2xl")} type="single" collapsible>
+            <AccordionItem className="w-full" value="item-1">
+                <AccordionTrigger className="!w-full"><a href={item.link} target="_blank">{item.name}</a></AccordionTrigger>
+                <AccordionContent className="font-light text-gray-400">
+                    {item.description}
+                    <div className="flex-wrap flex gap-2 items-center mt-3">
+                        {item?.tech.map((item, i) => (
+                            <div key={i} className="whitespace-nowrap inline-flex items-center text-xs font-medium px-3 py-1 rounded-full border border-white/10 bg-white/5 text-gray-300">{item}</div>
+                        ))}
+                    </div>
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+    )
 }
 

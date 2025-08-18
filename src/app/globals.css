@@ -369,50 +369,6 @@ html {
 } */
 
 
-
-.btn {
-  cursor: pointer;
-  width: fit-content;
-  padding: 16px 15px;
-  padding-right: 30px;
-  position: relative;
-  -webkit-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.btn i {
-  position: absolute;
-  font-size: 20px;
-  top: 42%;
-  right: 5%;
-  display: none;
-  transition: all 100ms ease-in;
-}
-
-.btn:hover {
-  background-color: rgb(241, 241, 241, 0.1);
-  border-color: #e1e1e140;
-  color: #fff;
-  padding-right: 60px;
-}
-
-.btn:hover i {
-  display: block;
-}
-
-@keyframes strike {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-
 .inputStyle::after {
   content: " ";
   background: #171d25;

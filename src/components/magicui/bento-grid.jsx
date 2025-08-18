@@ -54,8 +54,8 @@ const BentoCard = ({
         className={cn(
           "lg:hidden pointer-events-none flex w-full translate-y-0 transform-gpu flex-row items-center transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         )}>
-        <Button variant="link" asChild size="sm" className="pointer-events-auto p-0">
-          <a href={href}>
+        <Button variant="link" asChild size="sm" className="pointer-events-auto text-white p-0">
+          <a target="_blank" href={href}>
             {cta}
             <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
           </a>
@@ -68,7 +68,7 @@ const BentoCard = ({
         "hidden lg:flex pointer-events-none absolute bottom-0 w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
       )}>
       <Button variant="link" asChild size="sm" className="pointer-events-auto text-white p-0">
-        <a href={href}>
+        <a target="_blank" href={href}>
           {cta}
           <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
         </a>
