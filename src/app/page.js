@@ -9,7 +9,7 @@ import Dock from './components/dock/index.jsx'
 export default function Home() {
   return (
     <div className="font-sans relative bg-background1">
-      
+
      <Dock />
 
      <HeroSection />
@@ -18,7 +18,7 @@ export default function Home() {
         <ProjectsGrid />
       </section>
 
-      <section id="experience" className="relative flex flex-col bg-background1  justify-between mx-auto pb-20  w-[min(1200px,95%)]">
+      <section id="experience" >
         <ExperienceChart />
       </section>
 

@@ -124,17 +124,29 @@ export default function Project() {
   }, []);
 
   return (
-    <div className=' justify-center items-center text-[#efefef] text-[clamp(12px,1.5vw,15px)] bg-[#0d1116] font-poppins relative'>
+    <div className="relative flex flex-col bg-background1 justify-between mx-auto pb-20 ">
+<div
+  className={cn(
+    "absolute top-8 left-0 right-0 bottom-8", // 8px inset from all sides
+    "[background-size:22px_22px]",
+    "[background-image:radial-gradient(#c5c5c5_1px,transparent_1px)]",
+    "dark:[background-image:radial-gradient(#000000,transparent_1px)]",
+  )}
+/>
+{/* Radial gradient for the container to give a faded look */}
+{/* <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[hsla(0, 0%, 0%, 1)] [mask-image:radial-gradient(circle_at_bottom_right,black_80%,transparent_5%)] dark:bg-[hsla(0, 0%, 0%, 0.3)]"></div> */}
+<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background1 [mask-image:radial-gradient(circle_at_bottom_left,transparent_1%,black)] dark:bg-black"></div>
+<div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background1 [mask-image:radial-gradient(circle_at_top_left,transparent_1%,black)] dark:bg-black"></div>
+
+    <div className=' justify-center mx-auto items-center text-[#efefef] text-[clamp(12px,1.5vw,15px)] font-poppins relative w-[min(1200px,95%)]'>
 
       <div className={cn("flex flex-col py-2 md:py-12 xl:py-16 temprature", !isExpanded && "gap-2" )} >
-
-  
-        {/* navigation */}
+      
         <div className='projectName flex flex-row gap-5 items-center p-3'>
 
           <div className="flex flex-col gap-2">
             <div className=" relative flex items-center gap-5">
-              <p className="text-4xl inline-block md:text-5xl font-black font-Montserrat">
+              <p className="text-4xl inline-block md:text-5xl shadow-sm font-black font-Montserrat">
                 Experience
               </p>
               <button onClick={() => setIsExpanded(prev => !prev)} className="rounded-full relative mt-2 w-12 h-12 bg-background1 hover:bg-background2 border border-transparent hover:border-background4 flex items-center justify-center transition-all duration-300 ease-in-out">
@@ -386,6 +398,7 @@ export default function Project() {
 
       </div>
 
+    </div>
     </div>
   );
 }
