@@ -351,7 +351,7 @@ const projects = [
     },
     {
         name: "Influcent Dashboard",
-        link: "https://demo.influcent.com/",
+        link: "https://dashboard.influcent.com/",
         description: "Built a service dashboard enabling creators to manage branded websites. Developed tools for courses, consultations, QA, lead capture, and AI bots.",
         tech: ["Next.js", "ReactJS", "Chakra UI", "Redux", "Chart.js"],
         duration: "Nov 2024 – Present",
