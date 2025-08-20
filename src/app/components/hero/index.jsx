@@ -88,8 +88,8 @@ export default function Home() {
                     <Fade triggerOnce bottom delay={300} distance="50px">
                         <div className="flex flex-wrap gap-2 text-white pb-5">
                             {techStack.map((item, index) => (
-                                <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="group relative tag p-3 flex items-center bg-background3 border border-1 border-background2 rounded-full ">
-                                    <Image className="w-8 h-8" src={item.icon} />
+                                <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="group relative tag p-2 sm:p-3 flex items-center bg-background3 border border-1 border-background2 rounded-full ">
+                                    <Image className="w-5 h-5 sm:w-8 sm:h-8" src={item.icon} />
                                     <span className="absolute whitespace-nowrap bottom-[-30px] scale-0 rounded bg-gray-800 px-2 py-1 text-xs text-white group-hover:scale-100 transition-all">
                                         {item.name}
                                     </span>
