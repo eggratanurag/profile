@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="font-sans relative bg-background1">
 
-     <Dock />
+     {/* <Dock /> */}
 
      <HeroSection />
 

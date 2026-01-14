@@ -187,7 +187,7 @@ export default function Project() {
             <div className={cn("card min-h-[200px]", isExpanded && "min-h-[550px] md:min-h-[500px]")} ></div>
             <div className="cardContent">
               <div className="flex justify-between items-start" >
-              <p className="text-lg" >Influcent Technologies</p>
+              <p className="text-lg blur-sm select-none" style={{ filter: 'blur(4px)', userSelect: 'none' }}>Confidential Company</p>
               <div className="dateInfo">
                 <p className='content'>Frontend developer</p>
                 <p className='content'>May 2025 - Current</p>
@@ -208,15 +208,8 @@ export default function Project() {
                   </ul>
                 </section>}
 
-                {isExpanded && <p className='content mt-2' >Influcent is a creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</p>}
-                <div >
-                  <p className='content2'>Projects I've worked on</p>
-                  <div className="flex flex-row gap-[10px] mt-[20px] flex-wrap">
-                    <Link href="https://influcent.com" target="_blank" ><button className=" rounded-full min-h-[35px] px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">influcent.com</button></Link>
-                    <Link href="https://dashboard.influcent.com" target="_blank"  ><button className="rounded-full min-h-[35px] px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">dashboard.influcent.com</button></Link>
-                    {/* <Link href="https://nitikabhola.com" target="_blank" ><button className="rounded-full h-[35px] px-5 text-highlight bg-background4 shadow-[o_1px_4px_background2] border border-1 border-background4 hover:bg-background2  transition-all ease-in-out delay-50">nitikabhola.com</button></Link> */}
-                  </div>
-                </div>
+                {isExpanded && <p className='content mt-2'>A creator monetization platform that helps influencers and educators launch, manage, and sell services like consultations, webinars, and online courses, with integrated scheduling, payments, and marketing tools.</p>}
+                {/* Project links removed for confidentiality */}
               </div>
             </div>
           </div>

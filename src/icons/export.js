@@ -16,6 +16,9 @@ import sanity from "./sanity.png";
 import supabase from "./supabase.png";
 import tailwind from "./tailwind.png";
 import typescript from "./typescript.png";
+import jest from "./jest.png";
+import chatgpt from "./chatgpt.png";
+import mongodb from "./mongodb.png";
 
 export {
   chakraui,
@@ -34,4 +37,7 @@ export {
   supabase,
   tailwind,
   typescript,
+  jest,
+  chatgpt,
+  mongodb,
 };

@@ -12,7 +12,7 @@ import './index.css';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion"
 import { CiFolderOn } from "react-icons/ci";
 import { LinkPreview } from "@/components/ui/link-preview";
- 
+
 const Chart = dynamic(() => import('react-apexcharts'), {
     ssr: false,
     loading: () => <div className="w-full h-full bg-gray-800 flex items-center justify-center text-white">Loading chart...</div>
@@ -96,11 +96,11 @@ const data = [{
     name: 'Organic Traffic',
     data: [41, 40, 28, 51, 42, 109, 100],
     color: "#c1a9f4"
-  }, {
+}, {
     name: 'Conversion Rate',
     data: [11, 32, 45, 32, 34, 52, 41],
     color: "#addbdf"
-  }]
+}]
 
 const lineChartDataOverallRevenue = {
     series: data,
@@ -184,49 +184,96 @@ const lineChartDataOverallRevenue = {
 
 const features = [
     {
-        name: "Influcent",
-        description: "Empowering Creators to Turn Passion Into Profit",
-        href: "https://influcent.com",
+        name: "Beep Owner",
+        description: "Connect anonymously with the owner of assets",
+        href: "https://beepowner.com",
         cta: "View project",
         className: "col-span-3 lg:col-span-1",
         background: (
-            <div className="bg-none w-full text-white absolute right-0 top-2 origin-top scale-95 rounded-[10px]  transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90 ">
-                <div className="bg-none h-[31px] w-full rounded-t-[7px] pl-4 flex items-center gap-2">
-                    <div className="bg-[#F2A103] rounded-full w-[12px] h-[12px]"></div>
-                    <div className="bg-[#0081DF] rounded-full w-[12px] h-[12px]"></div>
-                    <div className="bg-[#3EB489] rounded-full w-[12px] h-[12px]"></div>
-                </div>
-                <div className="pl-4 pt-2">
-                    <p className="text-[17.11px] font-bold text-center">
-                        Services we provide!
-                    </p>
-                </div>
-                <div className="p-4 bg-none w-full ">
-                    <div className="w-full" >
-                        <div className="flex flex-col gap-2 ">
-                            {questions[0].options.map((option, idx) => (
-                                <label key={idx} className="flex items-center gap-2">
-                                    <input
+            <div className=" h-[200px] font-sans flex justify-center ">
+                <div className="px-4 pt-6 pb-24">
 
-                                        type="checkbox"
-                                        className="w-4 h-4 cursor-pointer bg-transparent"
-                                    />
-                                    <span className="text-sm font-normal">{option}</span>
-                                </label>
-                            ))}
-                        </div>
-
-                        <button
-                            type="submit"
-                            className="text-white bg-[#0081DF] mr-2 rounded-[3.5px] absolute bottom-0 right-0 p-2"
-                        >
-                            ➡
-                        </button>
+                    {/* Date */}
+                    <div className="my-3 flex justify-center">
+                        <span className="px-3 py-1 rounded-full text-xs bg-[#83838379] text-black">
+                            Today
+                        </span>
                     </div>
+
+                    {/* Message from other */}
+                    <div className="mb-2.5">
+                        <div className="max-w-[75%] mr-auto bg-[#3f3f3f92] border  rounded-[12px] p-3">
+                            <p className="text-[14px] text-black">
+                                Hello! How can I help you today?
+                            </p>
+                            <div className="mt-1.5 text-right text-[10px] text-black">
+                                10:00 AM
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Message from me */}
+                    <div className="mb-2.5">
+                        <div className="max-w-[75%] ml-auto bg-[#3733419c] rounded-[12px] p-3">
+                            <p className="text-[14px] text-black">
+                                Hi! I'm interested in learning more about this.
+                            </p>
+                            <div className="mt-1.5 text-right text-[10px] text-black">
+                                10:05 AM ✓✓
+                            </div>
+                        </div>
+                    </div>
+
+                 
                 </div>
             </div>
+
         ),
     },
+    // {
+    //     name: "Beep Owner",
+    //     description: "Connect anonymously with the owner of assets",
+    //     href: "https://beepowner.com",
+    //     cta: "View project",
+    //     className: "col-span-3 lg:col-span-1",
+    //     background: (
+    //         <div className="bg-none w-full text-white absolute right-0 top-2 origin-top scale-95 rounded-[10px]  transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-90 ">
+    //             <div className="bg-none h-[31px] w-full rounded-t-[7px] pl-4 flex items-center gap-2">
+    //                 <div className="bg-[#F2A103] rounded-full w-[12px] h-[12px]"></div>
+    //                 <div className="bg-[#0081DF] rounded-full w-[12px] h-[12px]"></div>
+    //                 <div className="bg-[#3EB489] rounded-full w-[12px] h-[12px]"></div>
+    //             </div>
+    //             <div className="pl-4 pt-2">
+    //                 <p className="text-[17.11px] font-bold text-center">
+    //                     Services we provide!
+    //                 </p>
+    //             </div>
+    //             <div className="p-4 bg-none w-full ">
+    //                 <div className="w-full" >
+    //                     <div className="flex flex-col gap-2 ">
+    //                         {questions[0].options.map((option, idx) => (
+    //                             <label key={idx} className="flex items-center gap-2">
+    //                                 <input
+
+    //                                     type="checkbox"
+    //                                     className="w-4 h-4 cursor-pointer bg-transparent"
+    //                                 />
+    //                                 <span className="text-sm font-normal">{option}</span>
+    //                             </label>
+    //                         ))}
+    //                     </div>
+
+    //                     <button
+    //                         type="submit"
+    //                         className="text-white bg-[#0081DF] mr-2 rounded-[3.5px] absolute bottom-0 right-0 p-2"
+    //                     >
+    //                         ➡
+    //                     </button>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //     ),
+    // },
     {
 
         name: "MX360",
@@ -310,9 +357,9 @@ const features = [
 
 const tabsList = [
     { title: "Grid", icon: CiGrid31, key: 0, headings: "Projects" },
-    { title: "All", icon: CiCircleList, key: 1, headings: "All Projects"  },
-    { title: "Personal", icon: CiFolderOn, key: 2, headings: "Personal"  },
-    { title: "Freelance", icon: IoBriefcaseOutline, key: 3, headings: "Freelance"  },
+    { title: "All", icon: CiCircleList, key: 1, headings: "All Projects" },
+    { title: "Personal", icon: CiFolderOn, key: 2, headings: "Personal" },
+    { title: "Freelance", icon: IoBriefcaseOutline, key: 3, headings: "Freelance" },
     // { title: "OpenSrc", icon: VscGithubAlt, key: 2, headings: "Open Src"  },
 ]
 
@@ -350,14 +397,6 @@ const projects = [
         type: [0, 1],
     },
     {
-        name: "Influcent Dashboard",
-        link: "https://dashboard.influcent.com/",
-        description: "Built a service dashboard enabling creators to manage branded websites. Developed tools for courses, consultations, QA, lead capture, and AI bots.",
-        tech: ["Next.js", "ReactJS", "Chakra UI", "Redux", "Chart.js"],
-        duration: "Nov 2024 – Present",
-        type: [0, 1],
-    },
-    {
         name: "Mediotix",
         link: "https://mediotix.com",
         description: "Built an SSR marketing website with custom CMS integration. Focused on SEO, animations, and responsive performance.",
@@ -382,14 +421,6 @@ const projects = [
         type: [0, 1],
     },
     {
-        name: "Influcent.com",
-        link: "https://www.influcent.com/",
-        description: "Built the official website for Influcent, a B2B SaaS creator platform.",
-        tech: ["Next.js", "Chakra UI", "GraphQL APIs"],
-        duration: "Aug 2024 – Present",
-        type: [0, 1, 3],
-    },
-    {
         name: "Prestige School",
         link: "https://the-prestige-international-school-bhind.onrender.com/",
         description: "Build a School website connected to a dashboard for content management. It's a complete MERN Stack project.",
@@ -404,6 +435,30 @@ const projects = [
         tech: ["React.js", "CSS", "Express.js", "Node.js", "Google Login", "MongoDB"],
         duration: "Aug 2022 – Sept 2022",
         type: [0, 1, 2]
+    },
+    {
+        name: "Confidential Dashboard",
+        link: null,
+        description: "Built a service dashboard enabling creators to manage branded websites. Developed tools for courses, consultations, QA, lead capture, and AI bots.",
+        tech: ["Next.js", "ReactJS", "Chakra UI", "Redux", "Chart.js"],
+        duration: "Nov 2024 – Present",
+        type: [3],
+    },
+    {
+        name: "Private Platform",
+        link: null,
+        description: "Built the official website for a B2B SaaS creator platform.",
+        tech: ["Next.js", "Chakra UI", "GraphQL APIs"],
+        duration: "Aug 2024 – Present",
+        type: [3],
+    },
+    {
+        name: "Beep Owner",
+        link: "https://beepowner.com",
+        description: "Connect anonymously with the owner of assets",
+        tech: ["React.js", "Next.js", "Tailwind CSS"],
+        duration: "2023 – 2024",
+        type: [3],
     }
 ];
 
@@ -421,14 +476,14 @@ export default function BentoDemo() {
             {/* <div className="fadeIn absolute top-2 right-0  w-7 h-4 bg-highlight rounded-full mix-blend-normal filter blur-[8rem] mainBlob"></div> */}
             <div className=" flex flex-col sm:flex-row gap-5 sm:gap-0 mx-auto items-start sm:items-end justify-between mb-5 w-full">
                 <p className="text-4xl text-white inline-block md:text-5xl font-black font-Poppins">
-                   {tabsList[selected].headings} 
+                    {tabsList[selected].headings}
                 </p>
                 <div className="light">
                     <ExpandedTabs
                         setSelected={setSelected}
                         selected={selected}
                         activeColor="#F1F1F11A"
-                        tabs={tabsList} 
+                        tabs={tabsList}
                     />
                 </div>
             </div>
@@ -440,22 +495,26 @@ export default function BentoDemo() {
             </BentoGrid>}
 
             {selected !== 0 && projects.filter(item => item.type.includes(selected)).map((item, index) =>
-              <React.Fragment key={index}>
-               <AccordionComponent item={item} index={index} length={projects.filter(item => item.type.includes(selected)).length} />
-              </React.Fragment>
+                <React.Fragment key={index}>
+                    <AccordionComponent item={item} index={index} length={projects.filter(item => item.type.includes(selected)).length} />
+                </React.Fragment>
             )}
 
         </div>
     );
 }
 
-const AccordionComponent = ({item, index, length}) => {
+const AccordionComponent = ({ item, index, length }) => {
+    const confidentialProjects = ["Confidential Dashboard", "Private Platform"];
+    const isConfidential = confidentialProjects.includes(item.name);
     return (
         <Accordion className={cn("accordionButton px-5 !py-0 font-Poppins text-white flex !w-full items-center bg-background3 border border-background2", index === 0 && "rounded-tr-2xl rounded-tl-2xl", index === length - 1 && "rounded-bl-2xl rounded-br-2xl")} type="single" collapsible>
             <AccordionItem className="w-full" value="item-1">
                 <AccordionTrigger className="!w-full">
                     <LinkPreview url={item.link} >
-                       {item.name}
+                        <span className={isConfidential ? "blur-sm select-none" : ""} style={isConfidential ? { filter: 'blur(4px)', userSelect: 'none' } : {}}>
+                            {item.name}
+                        </span>
                     </LinkPreview>
                     {/* <a href={item.link} target="_blank">{item.name}</a> */}
                 </AccordionTrigger>
