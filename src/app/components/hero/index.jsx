@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImg from "./../../../images/profileImg.jpeg";
+import ProfileImg from "./../../../images/profileImg.webp";
 import { FaChevronRight } from "react-icons/fa6";
 import { Fade, Slide } from "react-awesome-reveal";
 import { FlipWords } from './../../../components/ui/flip-words.jsx';
