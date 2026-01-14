@@ -1,13 +1,9 @@
 // app/api/spotify/liked-songs/route.js
 import { NextResponse } from 'next/server';
 
-export async function GET() {
-
-    console.log("ENV VARS:", {
-        clientId: process.env.NEXT_SPOTIFY_CLIENT_ID ? "exists" : "missing",
-        clientSecret: process.env.NEXT_SPOTIFY_CLIENT_SECRET ? "exists" : "missing",
-        refreshToken: process.env.NEXT_SPOTIFY_REFRESH_TOKEN ? "exists" : "missing"
-      });
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const limit = searchParams.get('limit') || '10';
 
   try {
     // 1. Refresh access token
@@ -26,7 +22,7 @@ export async function GET() {
     const { access_token } = await authResponse.json();
 
     // 2. Fetch liked songs
-    const response = await fetch('https://api.spotify.com/v1/me/tracks?limit=10', {
+    const response = await fetch(`https://api.spotify.com/v1/me/tracks?limit=${limit}`, {
       headers: {
         'Authorization': `Bearer ${access_token}`
       }

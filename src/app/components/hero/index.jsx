@@ -11,7 +11,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import "./index.css"
 import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid';
 import { cn } from "@/lib/utils";
-import { chakraui, css, express, framerMotion, github, graphql, html, javascript, next, nodejs, reactNative, redux, sanity, supabase, tailwind, typescript, jest, chatgpt, mongodb} from './../../../icons/export.js';
+import { chakraui, css, express, framerMotion, github, graphql, html, javascript, next, nodejs, reactNative, redux, sanity, supabase, tailwind, typescript, jest, chatgpt, mongodb } from './../../../icons/export.js';
 import { LuGithub } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -19,10 +19,13 @@ import { SiLeetcode } from "react-icons/si";
 import { FaBehance } from "react-icons/fa6";
 import { FaDownload } from "react-icons/fa6";
 import { useState, useEffect } from "react";
+import { IoMdMale } from "react-icons/io";
 
 
 export default function Home() {
     const [currentTime, setCurrentTime] = useState("");
+    const [lastPlayed, setLastPlayed] = useState(null);
+    const [loadingSong, setLoadingSong] = useState(true);
 
     useEffect(() => {
         const updateTime = () => {
@@ -41,6 +44,33 @@ export default function Home() {
         const interval = setInterval(updateTime, 60000); // Update every minute
 
         return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
+
+    useEffect(() => {
+        async function fetchLastPlayed() {
+            try {
+                const res = await fetch('/api/spotify/liked-songs?limit=1');
+                const data = await res.json();
+
+                if (res.ok && data && Array.isArray(data) && data.length > 0 && data[0].track) {
+                    // Use the first liked song as "last played"
+                    setLastPlayed({
+                        track: data[0].track,
+                        played_at: new Date().toISOString()
+                    });
+                } else if (res.ok && Array.isArray(data) && data.length === 0) {
+                    setLastPlayed(null);
+                } else {
+                    console.error('Error response:', data);
+                }
+            } catch (err) {
+                console.error('Error fetching last played song:', err);
+            } finally {
+                setLoadingSong(false);
+            }
+        }
+
+        fetchLastPlayed();
     }, []);
 
     const techStack = [
@@ -114,14 +144,14 @@ export default function Home() {
                         </Fade>
                         <Fade triggerOnce bottom delay={400} distance="50px">
                             <p className="text-highlight2 text-base">
-                                High fidelity interfaces & pixel-perfect execution.
+                               High fidelity interfaces and scalable frontend architecture
                             </p>
                         </Fade>
                     </div>
                 </div>
 
                 {/* Top Right - Action Cards */}
-                <div className="space-y-4 ">
+                <div className="space-y-4 h-full flex flex-col min-h-0">
                     <Fade triggerOnce bottom delay={400}>
                         <a href="#contactMe" className="grid-card flex flex-row justify-between items-start p-6 group hover:bg-background2 transition-all cursor-pointer">
                             <div className="flex flex-col justify-between items-start">
@@ -134,9 +164,11 @@ export default function Home() {
                     </Fade>
 
                     {/* Bottom Right - Additional Info */}
-                    <Fade triggerOnce bottom delay={500}>
-                        <div className="grid-card  font-Poppins p-6 flex flex-col justify-between">
-                            <div className="flex justify-end mb-4">
+                    <div className="flex-1 flex min-h-0">
+                        <Fade triggerOnce bottom delay={500} className="w-full h-full flex">
+                            <div className="grid-card flex items-stretch flex-1 font-Poppins p-6 flex-col justify-between min-h-0 w-full">
+                            <div className="flex w-full justify-between mb-4">
+                                <div className="text-white flex items-center gap-2" ><IoMdMale /> <span className="text-gray-500" >|</span> <span>24</span></div>
                                 <span className="text-xs uppercase tracking-wider text-gray-400">ABOUT</span>
                             </div>
                             <div className="space-y-4">
@@ -144,7 +176,14 @@ export default function Home() {
                                     <div className="flex flex-col  h-full  text-highlight2 text-sm ">
                                         <div className="flex gap-2 items-center">
                                             <MdOutlineAlternateEmail fontSize="14px" />
-                                            <span >anuragojha8435@gmail.com</span>
+                                            <a 
+                                                href="https://mail.google.com/mail/?view=cm&to=anuragojha8435@gmail.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="hover:text-white transition-colors cursor-pointer"
+                                            >
+                                                anuragojha8435@gmail.com
+                                            </a>
                                         </div>
                                         <div className="self-stretch overflow-hidden mt-3 mb-0 flex gap-3 ">
                                             <div className="flex flex-row gap-3 flex-1 pt-2">
@@ -201,23 +240,18 @@ export default function Home() {
                                         </div>
                                     </div>
                                 </Fade>
-                                <div className="">
-                                    {/* <p className="text-sm text-gray-400 leading-relaxed">
-                                        I turn complex ideas into intuitive interfaces, optimize performance, and ensure
-                                        pixel-perfect execution. Always exploring emerging tools to refine my craft.
-                                    </p> */}
-                                </div>
                             </div>
                         </div>
-                    </Fade>
+                        </Fade>
+                    </div>
                 </div>
 
                 {/* Middle - Image/Profile Section */}
                 <Fade triggerOnce bottom delay={500}>
                     <div
-                        className="lg:col-span-1 grid-card p-0 overflow-hidden relative group flex flex-col min-h-0"
+                        className="lg:col-span-1 grid-card p-0 overflow-hidden items-stretch h-full relative group flex flex-col min-h-0"
                     >
-                        <div className="flex-1 min-h-0 relative">
+                        <div className="flex-1 min-h-0 relative self-stretch h-full">
                             <Image
                                 className="w-full h-full object-cover"
                                 src={ProfileImg}
@@ -273,19 +307,19 @@ export default function Home() {
                     </Fade>
 
                     <Fade triggerOnce bottom delay={600}>
-                        <div className="flex items-stretch gap-2">
+                        <div className="flex  h-full gap-2">
                             <div className="px-4 flex items-center justify-center bg-background2 border border-background4  uppercase  text-white">
                                 <p className="text-center" >MY STACK</p>
                             </div>
 
-                            <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-[3px] w-full">
+                            <div className="grid grid-cols-6 sm:grid-cols-9  gap-[3px] w-full">
                                 {techStack.map((item, index) => (
                                     <a
                                         key={index}
                                         href={item.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="group relative  p-2 flex items-center justify-center bg-background3 border border-background2 hover:bg-background2 transition-all w-[100%]"
+                                        className="group relative p-2 flex items-center justify-center bg-background3 border border-background2 hover:bg-background2 transition-all w-[100%]"
                                     >
                                         <Image className="w-5 h-5 sm:w-6 sm:h-6 object-contain" src={item.icon} alt={item.name} />
                                         <span className="absolute whitespace-nowrap bottom-[-30px] scale-0 rounded bg-gray-800 px-2 py-1 text-xs text-white group-hover:scale-100 transition-all z-50">
@@ -298,27 +332,87 @@ export default function Home() {
                     </Fade>
 
                     <Fade triggerOnce bottom delay={600}>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-stretch">
+                        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 items-stretch">
 
-                            <div className="flex flex-row gap-3" >
-
-                                <div className="grid-card self-stretch overflow-hidden p-4 flex flex-col gap-3">
+                            <div className="hidden sm:flex flex-row gap-3 w-full" >
+                                <div className="grid-card w-full self-stretch overflow-hidden p-4 flex flex-col gap-3">
                                     <div className="flex flex-row gap-3 flex-1 items-center justify-center">
                                         <div className="flex flex-col items-center justify-center">
                                             <p className="text-2xl md:text-3xl font-bold text-white  font-Poppins">{currentTime}</p>
                                         </div>
                                     </div>
                                 </div>
-                                {/* <div className="flex grid-card w-[80px] self-stretch overflow-hidden">
-                                    <Image className="w-full h-full object-cover" src={KumaBonney} alt="Kuma Bonney" />
-                                </div> */}
+                            </div>
+
+                            <div className="sm:col-span-2">
+                                {lastPlayed ? (
+                                    <a
+                                        href={lastPlayed.track.external_urls.spotify}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="grid-card p-4 flex flex-row items-center gap-4 group hover:bg-background2 transition-all cursor-pointer"
+                                    >
+                                        <div className="relative w-16 h-16 flex-shrink-0 rounded overflow-hidden">
+                                            <Image
+                                                src={lastPlayed.track.album.images[0]?.url || '/placeholder-album.jpg'}
+                                                alt={lastPlayed.track.album.name}
+                                                width={64}
+                                                height={64}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <div className="w-3 h-3 rounded-full bg-[#1ED760] flex-shrink-0"></div>
+                                                <span className="text-xs uppercase tracking-wider text-gray-400">Last played</span>
+                                            </div>
+                                            <h3 className="text-base font-bold text-white truncate mb-1">
+                                                {lastPlayed.track.name}
+                                            </h3>
+                                            <p className="text-sm text-gray-400 truncate">
+                                                by {lastPlayed.track.artists.map(artist => artist.name).join(', ')}
+                                            </p>
+                                        </div>
+                                        <div className="flex-shrink-0 w-10 h-10 rounded bg-background3 border border-background4 flex items-center justify-center group-hover:bg-background4 transition-all">
+                                            <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </div>
+                                    </a>
+                                ) : (
+                                    <div className="grid-card p-4 flex flex-row items-center gap-4 min-h-[80px]">
+                                        {loadingSong ? (
+                                            <div className="flex items-center justify-center w-full h-full">
+                                                <p className="text-sm text-gray-400">Loading...</p>
+                                            </div>
+                                        ) : (
+                                            <div className="flex items-center justify-center w-full h-full">
+                                                <p className="text-sm text-gray-400">No recent plays</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="flex-row flex md:hidden lg:flex gap-3 items-end" >
+
+                                <div className="flex sm:hidden flex-row gap-3" >
+                                    <div className="grid-card self-stretch overflow-hidden p-4 flex flex-col gap-3">
+                                        <div className="flex flex-row gap-3 flex-1 items-center justify-center">
+                                            <div className="flex flex-col items-center justify-center">
+                                                <p className="text-2xl md:text-3xl font-bold text-white  font-Poppins">{currentTime}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <a
                                     href="https://drive.google.com/file/d/1Z1kiMc59qJIOuwLNsLhgA_pF26GWOSxA/view?usp=sharing"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="grid-card aspect-square flex items-center justify-center group hover:bg-background2 transition-all cursor-pointer relative"
+                                    className="grid-card h-full aspect-square flex items-center justify-center group hover:bg-background2 transition-all cursor-pointer relative"
                                 >
-                                    <span className="text-gray-400 group-hover:text-white group-hover:opacity-0 transition-all text-sm font-semibold absolute">CV</span>
+                                    <span className="text-white group-hover:text-white group-hover:opacity-0 transition-all text-2xl font-semibold absolute">CV</span>
                                     <FaDownload className="text-gray-400 group-hover:text-white transition-all opacity-0 group-hover:opacity-100 text-lg" />
                                 </a>
 
@@ -326,8 +420,8 @@ export default function Home() {
                                     <p>Do</p>
                                     <p>More.</p>
                                 </div>
-
                             </div>
+
                         </div>
                     </Fade>
                 </div>
