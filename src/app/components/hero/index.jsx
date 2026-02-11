@@ -407,7 +407,7 @@ export default function Home() {
                                 </div>
 
                                 <a
-                                    href="https://drive.google.com/file/d/1Z1kiMc59qJIOuwLNsLhgA_pF26GWOSxA/view?usp=sharing"
+                                    href={process.env.NEXT_RESUME_LINK}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="grid-card h-full aspect-square flex items-center justify-center group hover:bg-background2 transition-all cursor-pointer relative"
